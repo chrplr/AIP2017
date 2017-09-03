@@ -486,7 +486,7 @@ then, hit the `Enter` key.
   3. **Warning!** If you get some errors during the expyriment installation, the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, stop rigth now, we will carry on Monday afternoon.  
 Otherwise, stay up for some more fun with the terminal!
 
-    4. Install "Homebrew
+    * Install "Homebrew
       * in a terminal, copy paste or type this command:
    
          ```
@@ -513,7 +513,7 @@ Otherwise, stay up for some more fun with the terminal!
 
      * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
 
-    5. Install pygame dependencies
+    * Install pygame dependencies
      * with the following command:
      
        ```
@@ -522,7 +522,7 @@ Otherwise, stay up for some more fun with the terminal!
 
      * wait
 
-  4. Finally resume the expyriment intallation
+  * Finally resume the expyriment intallation
 
 
 10. Check the pygame installation

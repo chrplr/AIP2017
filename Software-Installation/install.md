@@ -274,7 +274,7 @@ __________________________________________________
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`
     * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
-    
+     
      ```
      import pygame
      pygame.init()

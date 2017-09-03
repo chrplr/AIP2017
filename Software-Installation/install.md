@@ -297,9 +297,9 @@ __________________________________________________
   
 5. Testing expyriment
 
-  1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
+  * Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
   You should see the `In [1]: ` and the blinking cursor after which you can start typing.
-  2. In the console, type or copy paste the following lines one by one
+  * In the console, type or copy paste the following lines one by one
   
   ```
   import expyriment
@@ -311,24 +311,24 @@ __________________________________________________
   expyriment.control.initialize(exp)
   ```
   
-  3. You should now see this message:
+  * You should now see this message:
   
   ```
   Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
   Do you want to switch to windows mode? (Y/n)
   ```
   
-  4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
-  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
-  6. Select the python window and execute the following command:
+  * Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+  * Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
+  * Select the python window and execute the following command:
   
   ```
   expyriment.control.start()
   ```
   
-  7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+  * Then you should select the expyriment window and hit `Enter` to validate the subject number.  
   The windows should now diplay "Ready". Hit `Enter` a second time to validate.
-  8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
+  * Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
   
   ```
   expyriment.control.end()
@@ -460,7 +460,7 @@ then, hit the `Enter` key.
 
 
 10. Install expyriment and pygame
-1. install expyriment from the terminal, which installs pygame
+  1. install expyriment from the terminal, which installs pygame
      * launch a terminal if it's not done already
      * execute the following command (type the text, then press on the `Enter` key):
      
@@ -483,46 +483,46 @@ then, hit the `Enter` key.
      * close your session using the `apple menu` (clic on the apple icon on the top left of your screen), then `Log Out your_user_name`, or using the `Shift Cmd Q` keyboard shortcut
 
 
-3. **Warning!** If you get some errors during the expyriment installation, the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, stop rigth now, we will carry on Monday afternoon.  
+  3. **Warning!** If you get some errors during the expyriment installation, the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, stop rigth now, we will carry on Monday afternoon.  
 Otherwise, stay up for some more fun with the terminal!
 
-  4. Install "Homebrew
-    * in a terminal, copy paste or type this command:
- 
-       ```
-       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-       ```
-  
-   * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
+    4. Install "Homebrew
+      * in a terminal, copy paste or type this command:
+   
+         ```
+         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+         ```
+    
+     * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
      
-       ```
-       export CURL_CA_BUNDLE=/usr/local/curl/
-       curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
-       ```
+         ```
+         export CURL_CA_BUNDLE=/usr/local/curl/
+         curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
+         ```
 
-   * wait...
-   * once the installation is over type in the terminal
+     * wait...
+     * once the installation is over type in the terminal
    
        ```
        brew doctor
        ```
 
-   * wait...
-   * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
+     * wait...
+     * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
        **IF THERE IS ANY CRITICAL ERROR AND NOT JUST WARNINGS, STOP THE INSTALLATION PROCESS NOW AND ASK US WHAT TO DO**
 
-   * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
+     * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
 
-  5. Install pygame dependencies
-   * with the following command:
+    5. Install pygame dependencies
+     * with the following command:
      
        ```
        brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
        ```
 
-   * wait
+     * wait
 
-9. Finally resume the expyriment intallation
+  4. Finally resume the expyriment intallation
 
 
 10. Check the pygame installation

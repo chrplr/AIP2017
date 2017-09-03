@@ -267,7 +267,7 @@ __________________________________________________
  * When the installation of expyriment is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
  4. Testing pygame
  
-  1. First test
+  * First test
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`
     * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
@@ -285,7 +285,7 @@ __________________________________________________
     * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
     * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
     * if all these terms "console", "command", "prompt", "anaconda", or the difference between python and "ipython" seems rather confusing, don't worry, the first Info lectures will help you.
-  2. Second test
+  * Second test
     * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda3 64bits` folder, then on  `Anaconda Prompt`
     * at the prompt, type the following text, with the correct user name then press on `Enter`
     
@@ -296,6 +296,7 @@ __________________________________________________
      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
   
 5. Testing expyriment
+
   1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
   You should see the `In [1]: ` and the blinking cursor after which you can start typing.
   2. In the console, type or copy paste the following lines one by one

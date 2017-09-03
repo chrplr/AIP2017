@@ -248,27 +248,23 @@ __________________________________________________
  
  * close the window with the graph
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
-3. Installing pygame
+
+ 
+3. Installing expyriment et pygame
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
- * click on `All the programs` and then the `Anaconda3 64bits` folder, then on `Anaconda Prompt`
+ * click on `All the programs` and then the `Anaconda3 64bits` folder, then on `Anaconda Command Prompt`
  * this launches the anaconda terminal
  * notice a little rectangle is blinking after something that looks like `C:Users\user_name\AppData\Local\Continuum\Anaconda3>`?   
  This is call a "prompt" and it means you can type some text there to interract with your computer
  * at the prompt, type the following text and then press on the `Enter` key (this is called "executing a command", more on that in the first Info lectures!):
  
   ```
-  conda install conda
+  pip install expyriment
   ```
   
- * you will see some text messages during the installation of some python modules, don't worry!
+ * you will see some text messages during the installation of some python modules, in particular, messages about installing pygame and its dependencies.
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
- * when you are back to the blinking little rectangle, type this text, then press the `Enter` key:
- 
- ```
- conda install -c cogsci pygame=1.9.2a0
- ```
- 
- * When the installation of pygame is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
+ * When the installation of expyriment is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
 4. Testing pygame
   1. First test
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
@@ -297,17 +293,8 @@ __________________________________________________
       ```
      
      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-5. Installing expyriment
-  1. Launch the anaconda terminal
-    * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
-    * click on `All the programs` and then the `Anaconda folder`, then on `Anaconda Command Prompt`
-  2. execute the following command (type the text, then press on the `Enter` key):
   
-  ```
-  pip install expyriment
-  ```
-  
-6. Testing expyriment
+5. Testing expyriment
   1. Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
   You should see the `In [1]: ` and the blinking cursor after which you can start typing.
   2. In the console, type or copy paste the following lines one by one
@@ -467,68 +454,78 @@ then, hit the `Enter` key.
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
  * you are now back to the command line in the Terminal application.
 
-3. **Warning** Now the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, of if you'd like to sleep, stop rigth now, we will carry on Monday afternoon.  
+
+
+
+10. Install expyriment and pygame
+1. install expyriment from the terminal, which installs pygame
+     * launch a terminal if it's not done already
+     * execute the following command (type the text, then press on the `Enter` key):
+     
+       ```
+       pip install expyriment
+       ```
+     
+    * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default
+    * wait
+ 
+  2. restart your session  
+     * close the terminal by executing
+     
+     ```
+     exit
+     ```
+     
+     * quit the Terminal application, using the top menu `Terminal` > `Close Terminal` or the `CMD + Q` keyboard shortcut. You should not see the terminal anymore when navigating between applications using the `Alt + Tab` keyboard shortcut.
+
+     * close your session using the `apple menu` (clic on the apple icon on the top left of your screen), then `Log Out your_user_name`, or using the `Shift Cmd Q` keyboard shortcut
+
+
+3. **Warning!** If you get some errors during the expyriment installation, the Mac python install procedure starts to be tricky, if you don't feel confident with typing commands in a terminal, stop rigth now, we will carry on Monday afternoon.  
 Otherwise, stay up for some more fun with the terminal!
 
-4. Install "Homebrew
- * in a terminal, copy paste or type this command:
+  4. Install "Homebrew
+    * in a terminal, copy paste or type this command:
  
-     ```
-     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-     ```
-
- * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
+       ```
+       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+       ```
+  
+   * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
      
-     ```
-     export CURL_CA_BUNDLE=/usr/local/curl/
-     curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
-     ```
+       ```
+       export CURL_CA_BUNDLE=/usr/local/curl/
+       curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
+       ```
 
- * wait...
- * once the installation is over type in the terminal
+   * wait...
+   * once the installation is over type in the terminal
+   
+       ```
+       brew doctor
+       ```
+
+   * wait...
+   * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
+       **IF THERE IS ANY CRITICAL ERROR AND NOT JUST WARNINGS, STOP THE INSTALLATION PROCESS NOW AND ASK US WHAT TO DO**
+
+   * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
+
+  5. Install pygame dependencies
+   * with the following command:
      
-     ```
-     brew doctor
-     ```
+       ```
+       brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
+       ```
 
- * wait...
- * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
-       **IF THERE IS SOME CRITICAL ERROR AND NOT JUST WARNINGS, STOP THE INSTALLATION PROCESS NOW AND ASK US WHAT TO DO**
+   * wait
 
- * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
-
-5. Install pygame dependencies
- * with the following command:
-     
-     ```
-     brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
-     ```
-
- * wait
-
-9. Install "conda"
- * In a terminal, execute
-     
-     ```
-     conda install conda
-     ```
-
- * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default
- * wait
+9. Finally resume the expyriment intallation
 
 
-10. Finally install pygame
- * by typing in the terminal
-     
-     ```
-     conda install -c cogsci pygame=1.9.2a0
-     ```
-
- * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default
- * wait
-
-11. Check the pygame installation
- * in a terminal, type
+10. Check the pygame installation
+ * log in your session
+ * open a terminal and type
      
      ```
      ipython
@@ -555,28 +552,8 @@ Otherwise, stay up for some more fun with the terminal!
 
  * You should be able to play a silly game, including sound (make sure the sound is on, but not too loud).
 
-12. Installing expyriment
-  1. install expyriment from the terminal
-     * launch a terminal if it's not done already
-     * execute the following command (type the text, then press on the `Enter` key):
-     
-     ```
-     pip install expyriment
-     ```
-
-  2. restart your session  
-     * close the terminal by executing
-     
-     ```
-     exit
-     ```
-     
-     * quit the Terminal application, using the top menu `Terminal` > `Close Terminal` or the `CMD + Q` keyboard shortcut. You should not see the terminal anymore when navigating between applications using the `Alt + Tab` keyboard shortcut.
-
-     * close your session using the `apple menu` (clic on the apple icon on the top left of your screen), then `Log Out your_user_name`, or using the `Shift Cmd Q` keyboard shortcut
 
 13. Testing expyriment
-  0. log in your session
   1. open a Terminal
   2. Launch the ipython console by executing the command
      

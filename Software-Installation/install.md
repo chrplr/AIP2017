@@ -48,7 +48,7 @@ When you download an installer file for a software, it is very important to:
 Select the download instructions for your operating system:  
 [Downloads for Windows](#downloads-for-windows)  
 [Downloads for Mac OS](#downloads-for-mac-os)  
-[Downloads for Ubuntu](#Downloads-for-Ubuntu-16.04)
+[Downloads for Ubuntu](#downloads-for-Ubuntu-16.04)
 
 
 Installation instructions
@@ -67,7 +67,7 @@ Same if something does not work as expected, stop there and ask for our help on 
 Select the installation instructions for your operating system:  
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
-[Installations for Ubuntu](#Installation-for-Ubuntu-16.04)
+[Installations for Ubuntu](#installation-for-Ubuntu-16.04)
 
 
 Once the installation on your computer completed, you can get some reading material from the teachers (you will be able to get if on the following courses if you succesfully installed everything at home and thus don't need to come tomorrow morning)

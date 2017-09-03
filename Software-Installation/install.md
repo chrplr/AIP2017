@@ -250,7 +250,7 @@ __________________________________________________
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
 
  
-3. Installing expyriment et pygame
+3. Installing expyriment & pygame
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
  * click on `All the programs` and then the `Anaconda3 64bits` folder, then on `Anaconda Command Prompt`
  * this launches the anaconda terminal

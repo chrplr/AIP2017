@@ -488,41 +488,41 @@ Otherwise, stay up for some more fun with the terminal!
 
     * Install "Homebrew
       * in a terminal, copy paste or type this command:
-   
+         
          ```
          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
          ```
-    
-     * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
+         
+      * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
      
          ```
          export CURL_CA_BUNDLE=/usr/local/curl/
          curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
          ```
 
-     * wait...
-     * once the installation is over type in the terminal
-   
-       ```
-       brew doctor
-       ```
-
-     * wait...
-     * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
+      * wait...
+      * once the installation is over type in the terminal
+        
+        ```
+        brew doctor
+        ```
+        
+      * wait...
+      * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
        **IF THERE IS ANY CRITICAL ERROR AND NOT JUST WARNINGS, STOP THE INSTALLATION PROCESS NOW AND ASK US WHAT TO DO**
 
-     * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
+      * **If and only if** the doctor gave its green light, you can Now close (by typing `exit` and then closing the windows with the `cmd+W` key stroke combination) all your instances of the terminal application, quit the application `cmd+Q` and relaunch it.
 
     * Install pygame dependencies
-     * with the following command:
-     
-       ```
-       brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
-       ```
+      * with the following command:
+        
+        ```
+        brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
+        ```
+        
+      * wait
 
-     * wait
-
-  * Finally resume the expyriment intallation
+   * Finally resume the expyriment intallation
 
 
 10. Check the pygame installation

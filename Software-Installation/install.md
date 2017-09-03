@@ -48,7 +48,7 @@ When you download an installer file for a software, it is very important to:
 Select the download instructions for your operating system:  
 [Downloads for Windows](#downloads-for-windows)  
 [Downloads for Mac OS](#downloads-for-mac-os)  
-[Downloads for Ubuntu](#downloads-for-ubuntu)
+[Downloads for Ubuntu 16.0.4](#downloads-for-ubuntu)
 
 
 Installation instructions
@@ -67,7 +67,7 @@ Same if something does not work as expected, stop there and ask for our help on 
 Select the installation instructions for your operating system:  
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
-[Installations for Ubuntu](#installations-for-ubuntu)
+[Installations for Ubuntu 16.0.4](#installations-for-ubuntu)
 
 
 Once the installation on your computer completed, you can get some reading material from the teachers.
@@ -154,7 +154,7 @@ __________________________________________________
 
 ## Downloads for Ubuntu
 
-As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installations-for-Ubuntu-16.04)
+As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installations for Ubuntu 16.0.4](#installations-for-ubuntu)
 
 You can nevertheless download in advance Atom, Anaconda3 and Rstudio installers:
 

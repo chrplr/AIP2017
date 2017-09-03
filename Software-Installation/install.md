@@ -48,7 +48,7 @@ When you download an installer file for a software, it is very important to:
 Select the download instructions for your operating system:  
 [Downloads for Windows](#downloads-for-windows)  
 [Downloads for Mac OS](#downloads-for-mac-os)  
-[Downloads for Ubuntu](#Downloads for Ubuntu 16.04)
+[Downloads for Ubuntu](#Downloads-for-Ubuntu-16.04)
 
 
 Installation instructions

@@ -556,14 +556,14 @@ Otherwise, stay up for some more fun with the terminal!
 
 
 13. Testing expyriment
-  1. open a Terminal
-  2. Launch the ipython console by executing the command
+  * open a Terminal
+  * Launch the ipython console by executing the command
      
      ```
      ipython
      ```
      
-  3. In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
+  * In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
      
      ```
      import expyriment
@@ -581,18 +581,18 @@ Otherwise, stay up for some more fun with the terminal!
      > Python is running in an interactive shell but Expyriment wants to initialize a fullscreen
      > Do you want to switch to windows mode? (Y/n)
 
-  4. Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
+  * Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
 
-  5. Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
-  6. Select the python window and execute the following command:
+  * Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
+  * Select the python window and execute the following command:
      
      ```
      expyriment.control.start()
      ```
 
-  7. Then you should select the expyriment window and hit `Enter` to validate the subject number.  
+  * Then you should select the expyriment window and hit `Enter` to validate the subject number.  
      The windows should now diplay "Ready". Hit `Enter` a second time to validate.
-  8. Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command to finish the experiment and close the window:
+  * Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command to finish the experiment and close the window:
      
      ```
      expyriment.control.end()

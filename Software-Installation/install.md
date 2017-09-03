@@ -11,9 +11,9 @@ Each student should end up with a bundle of softwares which are needed for the c
 Important informations
 ----------------------
 
-This document contains detailed instructions on how to install these software on your computer. Please read them. You should try and follow them before coming to the first lectures. In case you encounter difficulties, we offer an install party to help you setup your computer. 
+This document contains detailed instructions on how to install these software on your computer. Please read them. You should try and follow them before coming to the first lectures. In case you encounter difficulties, we offer an install party to help you setup your computer.
 
-Install party: The **only** slot in the schedule dedicated to installation of softwares is on _Monday September 4 from 10am to 12pm. We will **not** answer any installation questions during the following lectures. 
+Install party: The **only** slot in the schedule dedicated to installation of softwares is on _Monday September 4 from 10am to 12pm. We will **not** answer any installation questions during the following lectures.
 
 Before coming to the install party, you have one important thing to do:
 
@@ -48,7 +48,7 @@ When you download an installer file for a software, it is very important to:
 Select the download instructions for your operating system:  
 [Downloads for Windows](#downloads-for-windows)  
 [Downloads for Mac OS](#downloads-for-mac-os)  
-[Downloads for Ubuntu](#downloads-for-Ubuntu-16.04)
+[Downloads for Ubuntu](#downloads-for-ubuntu)
 
 
 Installation instructions
@@ -67,10 +67,10 @@ Same if something does not work as expected, stop there and ask for our help on 
 Select the installation instructions for your operating system:  
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
-[Installations for Ubuntu](#installation-for-Ubuntu-16.04)
+[Installations for Ubuntu](#installations-for-ubuntu)
 
 
-Once the installation on your computer completed, you can get some reading material from the teachers (you will be able to get if on the following courses if you succesfully installed everything at home and thus don't need to come tomorrow morning)
+Once the installation on your computer completed, you can get some reading material from the teachers.
 
 __________________________________________________
 
@@ -152,10 +152,17 @@ To download the Scratch installer file `MacScratch1.4.dmg`, click on [this link]
 
 __________________________________________________
 
-## Downloads for Ubuntu 16.04
+## Downloads for Ubuntu
 
-As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installation-for-Ubuntu-16.04)
+As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installations-for-Ubuntu-16.04)
 
+You can nevertheless download in advance Atom, Anaconda3 and Rstudio installers:
+
+    wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+    wget https://github.com/atom/atom/releases/download/v1.18.0/atom-amd64.deb
+    wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
+
+(you may have to install `wget` with `sudo apt-get install wget`)
 
 __________________________________________________
 
@@ -201,7 +208,7 @@ __________________________________________________
   * fill the username and password and click on `login`, then your email and click on `Continue`
   * skip the local repository search
   * now you can just quit the "Github Desktop" application
-  
+
 ### Text Editor
 
 * If you are using a 64 bits version of Windows, install `atom`
@@ -223,7 +230,7 @@ __________________________________________________
  * click on `All the programs` and then the `Anaconda (64-bit)` folder, what you are looking for is the `IPython (Py 3.6)` entry. Click there (and not the `IPython (Py 3.6) Notebook` nor the `IPython (Py 3.6) QTConsole`).
  * this launches a window that understands only commands in the python language
  * in just after the `$` sign, type each of those lines one by one followed by a stroke on the `Enter` key
-   
+
    ```
    import numpy as np
    ```
@@ -245,11 +252,11 @@ __________________________________________________
    ```
    plt.show()
    ```
- 
+
  * close the window with the graph
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
 
- 
+
 3. Installing expyriment & pygame
  * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
  * click on `All the programs` and then the `Anaconda3 64bits` folder, then on `Anaconda Command Prompt`
@@ -257,21 +264,21 @@ __________________________________________________
  * notice a little rectangle is blinking after something that looks like `C:Users\user_name\AppData\Local\Continuum\Anaconda3>`?   
  This is call a "prompt" and it means you can type some text there to interract with your computer
  * at the prompt, type the following text and then press on the `Enter` key (this is called "executing a command", more on that in the first Info lectures!):
- 
+
   ```
   pip install expyriment
   ```
-  
+
  * you will see some text messages during the installation of some python modules, in particular, messages about installing pygame and its dependencies.
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
  * When the installation of expyriment is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
  4. Testing pygame
- 
+
   * First test
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`
     * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
-    
+
       ```
       import pygame
       pygame.init()
@@ -281,26 +288,26 @@ __________________________________________________
       pygame.time.wait(3000)
       pygame.quit()
       ```
-     
+
     * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
     * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
     * if all these terms "console", "command", "prompt", "anaconda", or the difference between python and "ipython" seems rather confusing, don't worry, the first Info lectures will help you.
   * Second test
     * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda3 64bits` folder, then on  `Anaconda Prompt`
     * at the prompt, type the following text, with the correct user name then press on `Enter`
-    
+
       ```
       python C:Users\user_name\AppData\Local\Continuum\Anaconda3\Lib\site-packages\pygame\examples\chimp.py
       ```
-     
+
      You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-  
+
 5. Testing expyriment
 
   * Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
   You should see the `In [1]: ` and the blinking cursor after which you can start typing.
   * In the console, type or copy paste the following lines one by one
-  
+
   ```
   import expyriment
   ```
@@ -310,30 +317,30 @@ __________________________________________________
   ```
   expyriment.control.initialize(exp)
   ```
-  
+
   * You should now see this message:
-  
+
   ```
   Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
   Do you want to switch to windows mode? (Y/n)
   ```
-  
+
   * Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
   * Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
   * Select the python window and execute the following command:
-  
+
   ```
   expyriment.control.start()
   ```
-  
+
   * Then you should select the expyriment window and hit `Enter` to validate the subject number.  
   The windows should now diplay "Ready". Hit `Enter` a second time to validate.
   * Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
-  
+
   ```
   expyriment.control.end()
   ```
-  
+
   If this doesn't close the expyriment window, hit the `Enter` key once more.  
   Now you can exit the python command line using `Ctrl+d` and `Enter`.
 
@@ -451,7 +458,7 @@ then, hit the `Enter` key.
    ```
    plt.show()
    ```
-   
+
  * close the window with the graph
  * close the ipython shell by typing `quit()` or the keyboard shortcut `ctrl + D`
  * you are now back to the command line in the Terminal application.
@@ -463,21 +470,21 @@ then, hit the `Enter` key.
   1. install expyriment from the terminal, which installs pygame
      * launch a terminal if it's not done already
      * execute the following command (type the text, then press on the `Enter` key):
-     
+
        ```
        pip install expyriment
        ```
-     
+
     * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default
     * wait
- 
+
   2. restart your session  
      * close the terminal by executing
-     
+
      ```
      exit
      ```
-     
+
      * quit the Terminal application, using the top menu `Terminal` > `Close Terminal` or the `CMD + Q` keyboard shortcut. You should not see the terminal anymore when navigating between applications using the `Alt + Tab` keyboard shortcut.
 
      * close your session using the `apple menu` (clic on the apple icon on the top left of your screen), then `Log Out your_user_name`, or using the `Shift Cmd Q` keyboard shortcut
@@ -488,13 +495,13 @@ Otherwise, stay up for some more fun with the terminal!
 
     * Install "Homebrew
       * in a terminal, copy paste or type this command:
-         
+
          ```
          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
          ```
-         
+
       * if you ever have an error about certificates using `curl`, execute the two following commands and restart the "Homebrew" install of the previous step
-     
+
          ```
          export CURL_CA_BUNDLE=/usr/local/curl/
          curl http://curl.haxx.se/ca/cacert.pem -o cacert.pem
@@ -502,11 +509,11 @@ Otherwise, stay up for some more fun with the terminal!
 
       * wait...
       * once the installation is over type in the terminal
-        
+
         ```
         brew doctor
         ```
-        
+
       * wait...
       * when the doctor gave you its check-up diagnosis, it should tell you that your system is ready for brewing stuff or something similar  
        **IF THERE IS ANY CRITICAL ERROR AND NOT JUST WARNINGS, STOP THE INSTALLATION PROCESS NOW AND ASK US WHAT TO DO**
@@ -515,11 +522,11 @@ Otherwise, stay up for some more fun with the terminal!
 
     * Install pygame dependencies
       * with the following command:
-        
+
         ```
         brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
         ```
-        
+
       * wait
 
    * Finally resume the expyriment intallation
@@ -528,13 +535,13 @@ Otherwise, stay up for some more fun with the terminal!
 10. Check the pygame installation
  * log in your session
  * open a terminal and type
-     
+
      ```
      ipython
      ```
 
  * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
-     
+
      ```
      import pygame
      pygame.init()
@@ -544,10 +551,10 @@ Otherwise, stay up for some more fun with the terminal!
      pygame.time.wait(3000)
      pygame.quit()
      ```
-     
+
  * press the keys `ctrl+D` to quit the ipython console, you should be back to the standard terminal (you should see `--bash--` on the top of the terminal window)
  * to further check the installation, in a terminal window, execute the following command
-    
+
     ```
     python $(find ~/anaconda* -name "chimp.py")
     ```
@@ -558,13 +565,13 @@ Otherwise, stay up for some more fun with the terminal!
 13. Testing expyriment
   * open a Terminal
   * Launch the ipython console by executing the command
-     
+
      ```
      ipython
      ```
-     
+
   * In this ipython console, once you see the `In [1]: ` and the blinking cursor, type or copy paste the following lines one by one
-     
+
      ```
      import expyriment
      ```
@@ -585,7 +592,7 @@ Otherwise, stay up for some more fun with the terminal!
 
   * Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
   * Select the python window and execute the following command:
-     
+
      ```
      expyriment.control.start()
      ```
@@ -593,7 +600,7 @@ Otherwise, stay up for some more fun with the terminal!
   * Then you should select the expyriment window and hit `Enter` to validate the subject number.  
      The windows should now diplay "Ready". Hit `Enter` a second time to validate.
   * Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command to finish the experiment and close the window:
-     
+
      ```
      expyriment.control.end()
      ```
@@ -606,7 +613,7 @@ __________________________________________________
 
 
 
-## Installation for Ubuntu 16.04
+## Installations for Ubuntu
 
 
 First of all, you must determine if your system is 32 or 64 bits. Open
@@ -635,7 +642,7 @@ Note: If you are already using a decent text editor under linux
 (gedit, emacs, vim,...) you won't need Atom or Sublime Text.
 
  * if your linux is 64 bits:
- 
+
     wget https://github.com/atom/atom/releases/download/v1.18.0/atom-amd64.deb
 	sudo dpkg -i atom-amd64.deb
 
@@ -657,13 +664,27 @@ if your system is 32 bits:
 Then, run the installer:
 
     bash Anaconda*.sh
-    
-To check the python installation, enter the command:
+
+Make sure to add the folder of anaconda at the front of the `PATH` variable in `.bashrc`:
+
+     echo "PATH=$HOME/anaconda3/bin:$PATH" >> ~/.bashrc
+
+And reopen a new terminal. Type the following line to check that you are indeed accessing anaconda python:
+
+	which python
+
+Then install the additional module
+
+	 pip install expyriment
+
+To check the Python installation, enter the command:
 
     ipython
-	
+
 And then type the following lines:
-    
+
+	import pygame
+	import expyriment
     import numpy as np
     import matplotlib.pyplot as plt
     from scipy import stats
@@ -671,7 +692,7 @@ And then type the following lines:
     y=stats.norm.pdf(x)
     plt.plot(x,y)
     plt.show()
-    
+
 This should plot a Gaussian curve.
 
 To exit the ipython shell, type `quit()` or the keyboard
@@ -688,13 +709,13 @@ First, set up an account on Github.com
 Then install git on your system:
 
     sudo apt install git-core
-   
+
 Configuration:
-   
+
      git config --global user.name "your_user_name"
      git config --global user.email your_email@example.com
-   
- 
+
+
 	cd
 	git clone https://github.com/chrplr/AIP2017.git
 
@@ -725,63 +746,25 @@ In a nutshell:
 
 ### Rstudio
 
-If you have not yet downloaded rstudio:
-
 If you have a 64 bits system (arch = `x86_64`)
 
 	wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
+	sudo apt install libjpeg62
+    sudo dpkg -i rstudio-*-amd64.deb
 
 If you have a 32 bits system (arch = `i686`)
 
 	wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
-
-
-Then
-
 	sudo apt install libjpeg62
     sudo dpkg -i rstudio-*-amd64.deb
-    rstudio
-	 
- In the rstudio console, type
+
+
+Then, launch `rstudio` in a terminal, and in the rstudio console, type
 
 	demo(graphics)
 
-And press enter to display graphs in the `plots` panel.
+And press 'enter' to display graphs in the `plots` panel.
 
 ### other useful software
 
-
-	sudo apt install meld rsync pandoc 
-
-
-
-### Atom Text Editor
-
-Note: If you are already using a decent text editor under Linux
-(gedit, emacs, vim,...) you won't need Atom or Sublime text. Otherwise:
-
- * if your linux is 64 bits, download `atom-amd64.deb` package from
-[this link](https://atom.io/download/deb) or from the webpage https://github.com/atom/atom/releases/latest
- * if your linux is 32 bits, download Sublime text from 
- https://www.sublimetext.com/3
-
-
-### Python3.6
- * if your linux is 64 bits, download the install script `Anaconda3-4.4.0-Linux-x86_64.sh` using
-[this link]( 
-https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh) or from the webpage https://www.continuum.io/downloads, selecting the Linux 64-bits installer for Python3.6.
-  * if your linux is 32 bits, download the install script `Anaconda3-4.4.0-Linux-x86.sh` using
-[this link](https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86.sh) or from the webpage https://www.continuum.io/downloads, selecting the Linux 32-bits installer for Python3.6.
-
-### Python documentation
-  * Download the archive of the official python documentation  https://docs.python.org/3.6/download.html.
-
-
-### Rstudio
- * if your linux is 64 bits, download the Rstudio desktop `rstudio-1.0.153-amd64.deb` using
-[this link](https://download1.rstudio.org/rstudio-1.0.153-amd64.deb) or from the webpage https://www.rstudio.com/products/rstudio/download3/ 
- * if your linux is 32 bits, download the package `rstudio-1.0.153-i386.deb` using
-[this link](https://download1.rstudio.org/rstudio-0.99.903-i386.deb) or from the webpage https://www.rstudio.com/products/rstudio/download3/
-
-
-Because the rest of linux installation still requires Internet access, we recommend that you now go to the installation instructions.
+	sudo apt install meld rsync pandoc

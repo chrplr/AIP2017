@@ -156,10 +156,11 @@ __________________________________________________
 
 As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installations-for-Ubuntu-16.04)
 
-You can nevertheless download in advance Atom and Anaconda3 installers:
+You can nevertheless download in advance Atom, Anaconda3 and Rstudio installers:
 
-     wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
-     wget https://github.com/atom/atom/releases/download/v1.18.0/atom-amd64.deb
+    wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+    wget https://github.com/atom/atom/releases/download/v1.18.0/atom-amd64.deb
+    wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
 
 (you may have to install `wget` with `sudo apt-get install wget`)
 
@@ -668,12 +669,22 @@ Make sure to add the folder of anaconda at the front of the `PATH` variable in `
 
      echo "PATH=$HOME/anaconda3/bin:$PATH" >> ~/.bashrc
 
+And reopen a new terminal. Type the following line to check that you are indeed accessing anaconda python:
+
+	which python
+
+Then install the additional module
+
+	 pip install expyriment
+
 To check the Python installation, enter the command:
 
     ipython
 	
 And then type the following lines:
     
+	import pygame
+	import expyriment
     import numpy as np
     import matplotlib.pyplot as plt
     from scipy import stats
@@ -686,10 +697,6 @@ This should plot a Gaussian curve.
 
 To exit the ipython shell, type `quit()` or the keyboard
 shortcut `ctrl + D`
-
-Finally, type:
-
-	 pip install expyriment
 	 
 
 ### Git
@@ -739,63 +746,29 @@ In a nutshell:
 
 ### Rstudio
 
-If you have not yet downloaded rstudio:
-
 If you have a 64 bits system (arch = `x86_64`)
 
 	wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
+	sudo apt install libjpeg62
+    sudo dpkg -i rstudio-*-amd64.deb
 
 If you have a 32 bits system (arch = `i686`)
 
 	wget https://download1.rstudio.org/rstudio-1.0.153-amd64.deb
-
-
-Then
-
 	sudo apt install libjpeg62
     sudo dpkg -i rstudio-*-amd64.deb
-    rstudio
-	 
- In the rstudio console, type
+
+
+Then, launch `rstudio` in a terminal, and in the rstudio console, type
 
 	demo(graphics)
 
-And press enter to display graphs in the `plots` panel.
+And press 'enter' to display graphs in the `plots` panel.
 
 ### other useful software
-
 
 	sudo apt install meld rsync pandoc 
 
 
 
-### Atom Text Editor
 
-Note: If you are already using a decent text editor under Linux
-(gedit, emacs, vim,...) you won't need Atom or Sublime text. Otherwise:
-
- * if your linux is 64 bits, download `atom-amd64.deb` package from
-[this link](https://atom.io/download/deb) or from the webpage https://github.com/atom/atom/releases/latest
- * if your linux is 32 bits, download Sublime text from 
- https://www.sublimetext.com/3
-
-
-### Python3.6
- * if your linux is 64 bits, download the install script `Anaconda3-4.4.0-Linux-x86_64.sh` using
-[this link]( 
-https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh) or from the webpage https://www.continuum.io/downloads, selecting the Linux 64-bits installer for Python3.6.
-  * if your linux is 32 bits, download the install script `Anaconda3-4.4.0-Linux-x86.sh` using
-[this link](https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86.sh) or from the webpage https://www.continuum.io/downloads, selecting the Linux 32-bits installer for Python3.6.
-
-### Python documentation
-  * Download the archive of the official python documentation  https://docs.python.org/3.6/download.html.
-
-
-### Rstudio
- * if your linux is 64 bits, download the Rstudio desktop `rstudio-1.0.153-amd64.deb` using
-[this link](https://download1.rstudio.org/rstudio-1.0.153-amd64.deb) or from the webpage https://www.rstudio.com/products/rstudio/download3/ 
- * if your linux is 32 bits, download the package `rstudio-1.0.153-i386.deb` using
-[this link](https://download1.rstudio.org/rstudio-0.99.903-i386.deb) or from the webpage https://www.rstudio.com/products/rstudio/download3/
-
-
-Because the rest of linux installation still requires Internet access, we recommend that you now go to the installation instructions.

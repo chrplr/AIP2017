@@ -67,7 +67,7 @@ Same if something does not work as expected, stop there and ask for our help on 
 Select the installation instructions for your operating system:  
 [Installations for Windows](#installations-for-windows)  
 [Installations for Mac OS](#installations-for-mac-os)  
-[Installations for Ubuntu](#installation-for-ubuntu-16.04)
+[Installations for Ubuntu](#installations-for-ubuntu-16.04)
 
 
 Once the installation on your computer completed, you can get some reading material from the teachers.
@@ -154,13 +154,14 @@ __________________________________________________
 
 ## Downloads for Ubuntu 16.04
 
-As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installation-for-Ubuntu-16.04)
+As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installation instructions for Ubuntu Linux](#Installations-for-Ubuntu-16.04)
 
 You can nevertheless download in advance Atom and Anaconda3 installers:
 
      wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
      wget https://github.com/atom/atom/releases/download/v1.18.0/atom-amd64.deb
 
+(you may have to install `wget` with `sudo apt-get install wget`)
 
 __________________________________________________
 
@@ -611,7 +612,7 @@ __________________________________________________
 
 
 
-## Installation for Ubuntu 16.04
+## Installations for Ubuntu 16.04
 
 
 First of all, you must determine if your system is 32 or 64 bits. Open
@@ -662,8 +663,12 @@ if your system is 32 bits:
 Then, run the installer:
 
     bash Anaconda*.sh
-    
-To check the python installation, enter the command:
+
+Make sure to add the folder of anaconda at the front of the `PATH` variable in `.bashrc`:
+
+     echo "PATH=$HOME/anaconda3/bin:$PATH" >> ~/.bashrc
+
+To check the Python installation, enter the command:
 
     ipython
 	
@@ -682,6 +687,10 @@ This should plot a Gaussian curve.
 To exit the ipython shell, type `quit()` or the keyboard
 shortcut `ctrl + D`
 
+Finally, type:
+
+	 pip install expyriment
+	 
 
 ### Git
 

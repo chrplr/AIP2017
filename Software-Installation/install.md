@@ -275,15 +275,15 @@ __________________________________________________
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`
     * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
      
-     ```
-     import pygame
-     pygame.init()
-     w=pygame.display.set_mode([300,300])
-     w.fill([128,37,213])
-     pygame.display.flip()
-     pygame.time.wait(3000)
-     pygame.quit()
-     ```
+    ```
+    import pygame
+    pygame.init()
+    w=pygame.display.set_mode([300,300])
+    w.fill([128,37,213])
+    pygame.display.flip()
+    pygame.time.wait(3000)
+    pygame.quit()
+    ```
      
     * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
     * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console

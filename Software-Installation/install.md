@@ -1,5 +1,5 @@
-#**Course 00: Software Installation**  
-##Monday Sept.4 2017
+# **Course 00: Software Installation**  
+## Monday Sept.4 2017
 
 
 Objectives

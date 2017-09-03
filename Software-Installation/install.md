@@ -265,7 +265,8 @@ __________________________________________________
  * you will see some text messages during the installation of some python modules, in particular, messages about installing pygame and its dependencies.
  * when you are asked `Procced ([y]/n)`, press on the `Enter` key (because yes is the default)
  * When the installation of expyriment is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
-4. Testing pygame
+ 4. Testing pygame
+ 
   1. First test
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`

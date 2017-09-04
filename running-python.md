@@ -1,6 +1,6 @@
 % How to work with Python 
 % Christophe Pallier
-%
+% Sept. 2017
 
 You can program in Python in (at least) three different ways: interactively with `jupyter notebook` or with an `ipython` command line, or using an edit-run cycle approach with a program editor (e.g. `atom`, `idle`, `spyder`,...).
 
@@ -21,11 +21,11 @@ The first step is to type `jupyter notebook` in a terminal
 
 A browser will open a page like the following:
 
-![Jupyter homepage](img/jupyter1.png) 
+![Jupyter homepage](figures/jupyter1.png) 
 
 By cliking on `New` and selecting `Python [root]`, a new tab will show a page like below, where you can enter python code in 'cells'. To execute the code in a cell, just move the cursor there and press `Ctrl+Enter`
 
-![Jupyter notebook](img/jupyter2.png)
+![Jupyter notebook](figures/jupyter2.png)
 
 A nice feature of the "n jupyter notebooks" is that they are saved automatically, in .ipynb files that can be shared with other people. This is very handy, for example, to send a data analysis report by email.
 
@@ -38,9 +38,9 @@ You can launch `ipython` in a terminal, and start typing python commands that ar
 
 2. Type `ipython` on the command-line and press `Enter`:
 
------------------------------- ------------------------------
-![](img/ipython_terminal1.png) ![](img/ipython_terminal2.png)
------------------------------- ------------------------------
+---------------------------------- ----------------------------------
+![](figures/ipython_terminal1.png) ![](figures/ipython_terminal2.png)
+---------------------------------- ----------------------------------
 
 
 3. When you terminal looks like the one of the right, you are  "talking" to ipython. Enter the following commands:
@@ -68,7 +68,7 @@ Using a **text editor**, e.g. *atom*, you write a python script, that is, a seri
 
 1. Open a Text-Editor (e.g. Atom)  and a Terminal window side-by-side:
 
-![Atom and Terminal side-by-side](img/editor-terminal.png)
+![Atom and Terminal side-by-side](figures/editor-terminal.png)
 
 2. Create a `New File` in the Editor and enter the following text:
 
@@ -98,4 +98,4 @@ Remarks:
 
 Some people like to work within a single application and avoid going back and forth from the text editor to the terminal.  A nice application for python developement is `spyder`, which provides an environment somewhat similar to the MATLAB IDE.
 
-![The "spyder" IDE](spyder.png)
+![The "spyder" IDE](figures/spyder.png)

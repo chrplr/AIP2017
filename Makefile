@@ -2,7 +2,7 @@ INPUT_MDS := $(wildcard *.md)
 INPUT_NB := $(wildcard *.ipynb)
 
 OUTPUT_PDF = $(INPUT_MDS:.md=.pdf)
-OUTPUT_HTML = $(INPUT_MDS:.md=-slides.html) 
+OUTPUT_HTML = $(INPUT_MDS:.md=.html) 
 OUTPUT_NB = $(INPUT_NB:.ipynb=.html)
 
 .PHONY: all html pdf clean

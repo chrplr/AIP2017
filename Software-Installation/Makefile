@@ -1,4 +1,4 @@
-# Time-stamp: <2015-09-11 11:32 christophe@pallier.org>
+# Time-stamp: <2017-09-04 11:01:02 cp983411>
 
 #PANDOC_OPTS := --standalone -S --toc -t slidy -V slidy-url=../css 
 PANDOC_OPTS :=  -s -S -c pandoc.css --toc
@@ -22,7 +22,7 @@ html: $(OUTPUT_HTML)
 pdf: $(OUTPUT_PDF)
 
 %.pdf: %.md
-	pandoc -s $< -o $@
+	pandoc -s --toc $< -o $@
 
 clean:
 	@rm -f $(OUTPUT_HTML) $(OUTPUT_PDF)

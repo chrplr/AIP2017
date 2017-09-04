@@ -669,7 +669,7 @@ Make sure to add the folder of anaconda at the front of the `PATH` variable in `
 
      echo "PATH=$HOME/anaconda3/bin:$PATH" >> ~/.bashrc
 
-And reopen a new terminal. Type the following line to check that you are indeed accessing anaconda python:
+Then, reopen a new terminal so that the change in .bashrc is taken into account. Type the following line to check that you are indeed accessing anaconda python:
 
 	which python
 

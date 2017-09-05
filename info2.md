@@ -79,7 +79,7 @@ ressources:
 
    - for Data Analysis, Statistics, see Allen B. Downey's _Think Stats_ http://greenteapress.com/thinkstats2
 
-   - for Science, see Allen B. Downey's _Think Complexity_. Especially Chapter 6 on Cellular Automata.  http://greenteapress.com/wp/think-complexity/
+   - for Science, see Allen B. Downey's _Think Complexity_.  http://greenteapress.com/wp/think-complexity/
 
 * General programming skills
 
@@ -238,22 +238,24 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 
 1. Write a function that reads a text file and count how many different words (types) it contains.
 
-1. Write a function that computes the number of occurrences of each word type in a text. First, consider that tokens are anything spearated by whitespaces. In a second step, improve you function to clean the punctuations, ignore case changes, etc...
+1. Write a function that computes the number of occurrences of each word type in a text. First, consider that tokens are anything separated by whitespaces. In a second step, improve you function to clean the punctuations, ignore case changes, etc...
 
 
 
 ## Projects 
 
 
-
-1. Write a program implementing a psychological experiment --- the Simon task (https://www.researchgate.net/figure/266736582_fig6_Figure-2-Trial-structure-and-stimuli-A-four-alternative-Simon-task-in-which-two-colors).  The exeriment is a succession of trials where either a green or a red disk is displayed. The user must press a left button for green disk, and a right button for red disk. Their reaction time is measures, in milliseconds. The trick is that the disks appear either at the left or at the right of a central fixation point. Althought location is irrelevant to perform the task, one typically observed an increase in reaction times when the side of display and the side of response are incongruent. To program this experiment, you should use the `expyriment` module.
-
 1. Write a simulator of a _Rodrego Register Machine_ (https://sites.tufts.edu/rodrego/). The input is a list of instructions (no need for line numbers).
 
 1. program one or several of the Sudoku solvers (https://en.wikipedia.org/wiki/Sudoku_solving_algorithms)
 
+1. Program a cellular Automata (See Chapter 6 of _Think Complexity_.  http://greenteapress.com/wp/think-complexity/)
+
 1. program a Pong game (https://en.wikipedia.org/wiki/Pong) or a breakout game https://en.wikipedia.org/wiki/Breakout_(video_game) . You may use  `pygame`, `pySDL2` or `pyglet`.
 
+1. Write a program implementing a psychological experiment --- the Simon task (https://www.researchgate.net/figure/266736582_fig6_Figure-2-Trial-structure-and-stimuli-A-four-alternative-Simon-task-in-which-two-colors).  The exeriment is a succession of trials where either a green or a red disk is displayed. The user must press a left button for green disk, and a right button for red disk. Their reaction time is measures, in milliseconds. The trick is that the disks appear either at the left or at the right of a central fixation point. Althought location is irrelevant to perform the task, one typically observed an increase in reaction times when the side of display and the side of response are incongruent. To program this experiment, you should use the `expyriment` module.
+
+1. Write a program implementing a psychological experiment: The _Attentional Network Task_ (ANT), using the `expyriment` module. (see https://www.researchgate.net/figure/265392381_fig1_Schematic-illustration-of-the-attention-network-test-ANT-as-applied-in-our-study-A)
 
 
 

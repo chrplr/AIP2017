@@ -47,3 +47,13 @@ You should make a local copy of these materials on your computer:
 
 Unfortunatly, the only way to update the files is to reload the full zip file and extract files again...
 
+------
+
+For the daring, you can try to learn git, although you will not need it during these lectures Here are some pointers:
+
+- The Git Parable:  http://tom.preston-werner.com/2009/05/19/the-git-parable.html
+- Git from the bottom up: https://jwiegley.github.io/git-from-the-bottom-up/
+- Version control at your fingertip http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git
+- The reference (complete book!) : https://git-scm.com/book/fr/v2
+
+

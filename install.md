@@ -4,7 +4,16 @@ Title: **Course 00: Software Installation**
 
 **Objective:**
 
-Each student should end up with a bundle of softwares which are needed for the courses of the Cogmaster.
+Each student should end up with a bundle of softwares which are needed for the courses of the Cogmaster:
+
+  * Scratch 1.4 from https://scratch.mit.edu/scratch_1.4/
+  * Anaconda Python 3.6 distribution from  https://www.continuum.io/downloads
+  * Atom (text editor) from https://atom.io/
+  * R from https://cran.r-project.org/
+  * Rstudio Desktop from https://www.rstudio.com
+  * Github Desktop from https://desktop.github.com/ (you will need to
+sign up on http://www.github.com)
+
 
 # Important informations
 

@@ -2,22 +2,17 @@
 % Christophe Pallier
 % Sept. 2017
 
-You can program in Python in (at least) three different ways: interactively with `jupyter notebook` or with an `ipython` command line, or using an edit-run cycle approach with a program editor (e.g. `atom`, `idle`, `spyder`,...).
+You can use Python in several ways: interactively with `jupyter notebook` or with an `ipython` command line, or using an edit-run cycle approach with a program editor (e.g. `atom`, `idle`, `spyder`,...).
 
-In all cases, you need to be able to open a command line window (a.k.a. **terminal**):
+First of all, you need to be able to open a command line window (a.k.a. **terminal**):
 
-  * Ubuntu-Linux: Ctrl-Alt-T (see https://help.ubuntu.com/community/UsingTheTerminal)
-  * MacOSX: Open Finder/Applications/Utilities/Terminal (see http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
-  * Windows: Win+X+Command-Prompt (see http://pcsupport.about.com/od/commandlinereference/f/open-command-prompt.htm)
-
+  * Ubuntu-Linux: `Ctrl-Alt-T` (see https://help.ubuntu.com/community/UsingTheTerminal)
+  * MacOSX: Open `Finder/Applications/Utilities/Terminal` (see http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
+  * Windows: Launch `Anaconda prompt`
 
 ## Using jupyter notebook
 
-The first step is to type `jupyter notebook` in a terminal
-
-    mkdir -p AIP2016-files  # only if AIP2016-file does not yet exist
-    cd AIP2016-myfiles
-    jupyter notebook
+Launch Jupyter Notebook from the Start Menu/Anaconda3 (in Windows) or type `jupyter notebook` in a terminal (Linux, MacOS):
 
 A browser will open a page like the following:
 
@@ -27,14 +22,13 @@ By cliking on `New` and selecting `Python [root]`, a new tab will show a page li
 
 ![Jupyter notebook](figures/jupyter2.png)
 
-A nice feature of the "n jupyter notebooks" is that they are saved automatically, in .ipynb files that can be shared with other people. This is very handy, for example, to send a data analysis report by email.
+A nice feature of the Jupyter notebooks is persistence, i.e. they are saved automatically (in `.ipynb` files) and you can go on working on the same notebook whn you reopen it. This is also very handy, for example, to send a data analysis report by email.
 
-Jupyter's documentation si available at http://jupyter.readthedocs.io/en/latest/index.html
+Jupyter's documentation is available at http://jupyter.readthedocs.io/en/latest/index.html
 
 ## Using ipython
 
-You can launch `ipython` in a terminal, and start typing python commands that are *interpreted* and *executed* when you press 'Enter'.
-
+1. Open Anaconda Prompt (Windows) or a terminal (Linux, MacOS). 
 
 2. Type `ipython` on the command-line and press `Enter`:
 
@@ -43,7 +37,7 @@ You can launch `ipython` in a terminal, and start typing python commands that ar
 ---------------------------------- ----------------------------------
 
 
-3. When you terminal looks like the one of the right, you are  "talking" to ipython. Enter the following commands:
+3. When your terminal looks like the one of the right, you are  "talking" to ipython. Enter the following commands:
 
 ```python
 	import turtle
@@ -68,7 +62,7 @@ Using a **text editor**, e.g. *atom*, you write a python script, that is, a seri
 
 1. Open a Text-Editor (e.g. Atom)  and a Terminal window side-by-side:
 
-![Atom and Terminal side-by-side](figures/editor-terminal.png)
+![Using Atom and a Terminal side by side](figures/editor-terminal.png)
 
 2. Create a `New File` in the Editor and enter the following text:
 
@@ -87,8 +81,7 @@ Using a **text editor**, e.g. *atom*, you write a python script, that is, a seri
 3. Using 'File/Save as',  save the this text under the filename `myscript.py` in your personal (home) directory
 * *run* with a python interpreter, by typing `python myscript.py` on a command line of the Terminal. Try it now.
 
-Important: you must make sure that the current working direcoty of the terminal is the same directory where the file myscript.py has been saved. Otherwise, you will get an error message such as 'No such file or directory'. To fix this problem, you must use the 'cd' command to navigate the directory structure.
-
+Important: you must make sure that the _current working directory_ of the terminal is the same directory where the file `myscript.py` has been saved. Otherwise, you will get an error message such as 'No such file or directory'. To fix this problem, you must use the `cd` command to navigate the directory structure.
 
 Remarks:
 
@@ -96,6 +89,6 @@ Remarks:
 
 ## Using an Integrated Development Environment
 
-Some people like to work within a single application and avoid going back and forth from the text editor to the terminal.  A nice application for python developement is `spyder`, which provides an environment somewhat similar to the MATLAB IDE.
+Some people like to work within a single application and avoid going back and forth from the text editor to the terminal.  A nice application for Python developement is `spyder`, which provides an environment somewhat similar to the MATLAB IDE.
 
-![The "spyder" IDE](figures/spyder.png)
+![The "spyder" Integrated Development Environment](figures/spyder.png)

@@ -23,7 +23,7 @@ At a abstract level, an automaton can be formally described by:
 
 ![Transition Diagram for the lyrics of _Hey Jude_](figures/heyjudeflowchart.jpg)
 
-![A Finite state diagram for Bengalese Finch songs (Berwick et al., 2011 _Trends in Cognitive Sciences_)](figures/BengaleseFinch_song_fsa.png) 
+![A (Probabilistic) Finite state diagram for Bengalese Finch songs (Berwick et al., 2011 _Trends in Cognitive Sciences_)](figures/BengaleseFinch_song_fsa.png) 
 
 (see also Descartes' *Les Animaux Machines*  [Lettre au Marquis de Newcastle](http://www.ac-grenoble.fr/PhiloSophie/logphil/oeuvres/descarte/newcastl.htm)
 
@@ -46,12 +46,12 @@ Daniel Dennett (1023) _Intuition Pumps and other tools for thinking_)
 
 The RogRego computer possesses:
 
-  - a bank of registers, or memory locations, each with a unique _address_ (1, 2, 3, ...), and each able to have, as _content_, a single integer (0, 1, 2, ...)
-  - a processing unit can execute instructions in a stepwise, one-at-a-time fashion. The processor knows only 3 instructions:
+- a bank of registers, or memory locations, each with a unique _address_ (1, 2, 3, ...), and each able to have, as _content_, a single integer (0, 1, 2, ...)
+- a processing unit can execute instructions in a stepwise, one-at-a-time fashion. The processor knows only 3 instructions:
 
-- **End**: finishes the programs
-- **Increment register**  with 2 arguments: a register #, an step number
-- **Decrement register and Branch** with 3 arguments, a register number and two step numbers.
+   - **End**: finishes the programs
+   - **Increment register**  with 2 arguments: a register #, an step number
+   - **Decrement register and Branch** with 3 arguments, a register number and two step numbers.
 
 An online demo is available at http://proto.atech.tufts.edu/RodRego/
 
@@ -143,8 +143,8 @@ Note that _conditional branching_ is the key instruction that gives the power to
 
   Programs written in higher-level languages (rather than Machine language) can be either:
   
-    -  **compiled**, or
-    -  **interpreted**
+  -  **compiled**, or
+  -  **interpreted**
 
   In both cases, you write the program as text files called **source files**.
 
@@ -156,15 +156,15 @@ Note that _conditional branching_ is the key instruction that gives the power to
 
 # Operating systems
 
-In the first computers, there was only **one** program running. Yo would load the program into memory, then run it until the end. Programs were ran in BATCH mode, in a sequence.
+In the first computers, there was only **one** program running. One would load the program into memory, then run it until it halted. Several Programs were ran in _batch mode_, in a sequence.
 
-Then, it was realized that computers could 'time-share' between programs, allowing several users (or programs) to share the computer.
+Then, it was realized that computers could _time-share_ between programs, allowing several users (or programs) to share the computer.
 
-This requires an operating systems (O.S.). The O.S. is the first program that loads into the computer during the boot. When running:
+This requires an **operating systems** (O.S.). The O.S. is the first program that loads into the computer during the boot. When running:
 
-* it controls the hardware (screen/printer/disk/keybord/mouse,...) (drivers) 
+* The OS controls the hardware (screen/printer/disk/keybord/mouse,...) (drivers) 
 
-* it manages all the other programs (processes/tasks/applications).
+* The OS manages all the other programs (processes/tasks/applications).
     * sharing memory
 	* allocating processors and cores
 	* allocating time 
@@ -214,7 +214,7 @@ When you open a terminal, a program called a **shell** is started that displays 
 
 - MacOSX: Open Finder/Applications/Utilities/Terminal (see <http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac>)
 
-- Windows: Win+X+Command-Prompt (see <http://pcsupport.about.com/od/commandlinereference/f/open-command-prompt.htm>)
+- Windows: Launch Anaconda Prompt
 
 
 # The shell
@@ -224,7 +224,6 @@ Inside the terminal, you are interacting with a program called a **Shell**.
 Various *Shells* exists: under Windows: cmd/powershell; under, Mac/linux: bash/tsch... they speak slighlty different languages.
 
 The shell displays a prompt and waits for you to type commands that it will execute. For example, if you type ipython, it will start the ipython program.
-
 
 One issue is that you have to know the available commands and the language.
 By contrast with a Graphical User Interface shell with

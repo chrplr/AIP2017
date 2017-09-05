@@ -2,14 +2,11 @@ Title: **Course 00: Software Installation**
  Monday Sept.4 2017
 
 
-Objectives
-----------
+**Objective:**
 
 Each student should end up with a bundle of softwares which are needed for the courses of the Cogmaster.
 
-
-Important informations
-----------------------
+# Important informations
 
 This document contains detailed instructions on how to install these software on your computer. Please read them. You should try and follow them before coming to the first lectures. In case you encounter difficulties, we offer an install party to help you setup your computer.
 
@@ -37,8 +34,7 @@ If you are using a debian-based Linux distribution, most of the install will be 
 You migh skip the `Atom` download and install if you are already using an advanced text editor such as wim, emacs, sublimetext...  
 Beware: Microsoft Office Word, LibreOffice and other document formatting softwares are **not** text editors.
 
-Download instructions
----------------------
+# Download instructions
 
 When you download an installer file for a software, it is very important to:
 
@@ -51,8 +47,7 @@ Select the download instructions for your operating system:
 [Downloads for Ubuntu 16.0.4](#downloads-for-ubuntu)
 
 
-Installation instructions
--------------------------
+# Installation instructions
 
 First, read the installation instructions relative to your operating system. Yes, I mean it, read all the installation instructions before trying to install anything.
 
@@ -74,34 +69,34 @@ Once the installation on your computer completed, you can get some reading mater
 
 __________________________________________________
 
-## Downloads for Windows
+# Downloads for Windows
 
 First, you need to check that you are using a 64 bits version of Windows,
 follow the instructions [on this website](http://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/). If your system is an old 32 bits, tell us on Monday 2:00 pm.
 
 If you are using windows 7 or earlier, it will be useful to know the full name of your files, so open a file explorer (window key + e), then select the `Organize` menu, then `Folder and search options`, then the second tab `View`, uncheck the box `Hide extensions for known file types`, and finally click the `OK` button.
 
-### Scratch
+## Scratch
 To download the Scratch installer file `ScratchInstaller1.4.exe`, click on [this link](http://download.scratch.mit.edu/ScratchInstaller1.4.exe) or use a right click and the option `Save target as`, then select an appropriate directory, for example the default `Downloads` folder. You can alternatively download the installer file directly from the webpage https://scratch.mit.edu/scratch_1.4/
 
-### Text Editor
+## Text Editor
 Download the Atom installer file `AtomSetup.exe`, use [this link](https://atom.io/download/windows). You can alternatively download the installer file directly by clicking on the big red `Download Windows Installer` button on http://atom.io
 
-### R and RStudio
+## R and RStudio
 * Download the lattest R package installer `R-3.4.1-win.exe` using [this link](https://cran.rstudio.com/bin/windows/base/R-3.4.1-win.exe) or directly from https://cran.rstudio.com/bin/windows/base/
 * Download the lattest RStudio installer `RStudio-1.0.153.exe` using [this link](https://download1.rstudio.org/RStudio-1.0.153.exe) or directly from https://www.rstudio.com/products/rstudio/download/
 
-### Git
+## Git
 Download the stable `GitHub Desktop` installer using [this link](https://github-windows.s3.amazonaws.com/GitHubSetup.exe) or directly from http://desktop.github.com by clicking on the `Download GitHub Desktop for Windows` link at the bottom of the webpage, under the "Not ready for Desktop Beta?" section.
 
-### Python
+## Python
 If you have a 64 bits Windows, download the Windows 64-Bit Python 3.6 Graphical Installer `Anaconda3-4.4.0-Windows-x86_64.exe` from [this link](https://repo.continuum.io/archive/Anaconda3-4.4.0-Windows-x86_64.exe) of directly from https://www.continuum.io/downloads
 
 __________________________________________________
 
-## Downloads for Mac OS
+# Downloads for Mac OS
 
-### Warming up
+## Warming up
 
 0. Make sure you know the administrator password for your computer (the password of your main account, i.e. the one you use to install new software) and that you are able to type it blind (i.e. even if you don't see little stars for each character).
 
@@ -116,29 +111,29 @@ __________________________________________________
  * Check that your version of Mac OS X is 10.9 or higher (for example 10.9.5 or 10.11.2 are higher, but 10.6.10 is lower).  
  If not or if you can't or don't want to risk an upgrade this evening, or if you are not sure, **stop right now, don't download or install anything, and come see us tomorrow at 2:00 pm**: you might be in one of the most complicated situations regarding software installations.
 
-### XQuartz
+## XQuartz
 Download `XQuartz-2.7.11.dmg` by clicking on [this link](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.11.dmg) or from https://www.xquartz.org
 
-### Python
+## Python
  Download the Python 3.6 Graphical Installer for Mac OS X from the Anaconda distribution with [this link](https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.pkg), or from http://continuum.io/downloads but then beware of selecting the correct version
 
-### Git
+## Git
 Download the stable `GitHub Desktop` installer using [this link](https://central.github.com/mac/latest) or directly from http://desktop.github.com by clicking on the `Download GitHub Desktop for Mac` link at the bottom of the webpage, under the "Not ready for Desktop Beta?" section.
 
-### Atom
+## Atom
 Download the Atom installer by clicking on [this link](https://atom.io/download/mac), or on the big red `Download For Mac` button on the webpage [http://atom.io]
 
-### Scratch
+## Scratch
 To download the Scratch installer file `MacScratch1.4.dmg`, click on [this link](http://download.scratch.mit.edu/MacScratch1.4.dmg) or use a right click and the option `Save target as`, then select an appropriate directory, for example the default `Downloads` folder. You can alternatively download the installer file directly from the webpage https://scratch.mit.edu/scratch_1.4/
 
-### R and RStudio
+## R and RStudio
  * Selecting the correct R version
    * If your system version is 10.11 (El Capitan) or 10.12 (Sierra), Download the R package installer `R-3.4.1.pkg` using [this link](https://cran.rstudio.com/bin/macosx/R-3.4.1.pkg) or directly from https://cran.rstudio.com/bin/macosx/
    * If your system version is 10.9 (Maverick) or 10.10 (Yosemite), Download the R package installer `R-3.3.3.pkg` using [this link](https://cran.rstudio.com/bin/macosx/R-3.3.3.pkg) or directly from https://cran.rstudio.com/bin/macosx/
    * If your system version is older but at least 10.6 (Snow Leopard), Download the R package installer `R-3.2.1-snowleopard.pkg` using [this link](https://cran.rstudio.com/bin/macosx/R-3.2.1-snowleopard.pkg) or directly from https://cran.rstudio.com/bin/macosx/
  * Installing RStudio: Download the lattest RStudio installer `RStudio-1.0.153.dmg` using [this link](https://download1.rstudio.org/RStudio-1.0.153.dmg) or directly from https://www.rstudio.com/products/rstudio/download/
 
-### Command Line Tools
+## Command Line Tools
   * open a terminal: click on `Application` icon in your dock, then on the `Utilities` icon, then on the `Terminal` icon. Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon. You can also type `terminal` in the Spotlight search.
   * in this terminal window, copy and paste the following text then press on the `Enter` key (from now on this will be called **executing a command in the terminal**)
 
@@ -152,7 +147,7 @@ To download the Scratch installer file `MacScratch1.4.dmg`, click on [this link]
 
 __________________________________________________
 
-## Downloads for Ubuntu
+# Downloads for Ubuntu
 
 As the linux installation requires on-line access to the Internet, the software downloads are part of the [Installations for Ubuntu 16.0.4](#installations-for-ubuntu)
 
@@ -168,9 +163,9 @@ __________________________________________________
 
 
 
-## Installations for Windows
+# Installations for Windows
 
-### Scratch
+## Scratch
  1. Open a file explorer (windows key + e) and open the directory in which you downloaded the installer file `ScratchInstaller1.4.exe`, typically the default `Downloads` directory.
  2. then execute the installer:
   * double-click on the `ScratchInstaller1.4.exe` file and wait
@@ -180,7 +175,7 @@ __________________________________________________
   * If you did not uncheck the options before clicking on `Finish`, you should see the program running and you coud reopen it using the desktop Scratch icon. Alternatively, you can open an explorer, go to the directory in which the program was installed and double click on the Scratch icon.
   * you should be able to move the little animal around
 
-### R and RStudio
+## R and RStudio
 
  1. Installation
   * open a file explorer (windows key + e) and open the directory in which you downloaded the installer file `R-?.?.?-win.exe` (the `?` stands for any character).
@@ -195,7 +190,7 @@ __________________________________________________
   * in the `Console` panel, type 'demo(graphics)' and hit the `Enter` key
 
 
-### Git
+## Git
 0. Set up an account on Github.com
   * Open an internet browser and go to http://github.com
   * fill the requested fields with appropriate username, email, and password
@@ -209,27 +204,27 @@ __________________________________________________
   * skip the local repository search
   * now you can just quit the "Github Desktop" application
 
-### Text Editor
+## Text Editor
 
 * If you are using a 64 bits version of Windows, install `atom`
  * use a file explorer (windows key + e) to open the directory in which you downloaded the installer file `AtomSetup.exe`
  * double-clicking on the installer file icon
  * if a pop-up dialog window ask you to install the `.NET Framework`, proceed by clicking on the `Install` button, then accept the installation and wait for the files to be downloaded and installed
 
-### Python
+## Python
 
 1. Installation of the Anaconda distribution
  * go to your download folder and double click on the Anaconda3 file installer icon to initiate the installation process
  * on the Anaconda Setup Wizard, beware, pay attention to the following options option:
  * verify that you Install for `Just Me (recommended)`, then click on `Next`
- * use default Destination folder and click on `Next`
- * check that both "Add Anaconda to my PATH" and "Register Anaconda as my default Python 3.6" are ckecked and click on `Install`
+ * Accept the default Destination folder and click on `Next`
+ * Accept the defaults (uncheck "Add Anaconda to my PATH" and  checl "Register Anaconda as my default Python 3.6" and click on `Install`
  * upon completion, click on 'Next', then `Finish`
 2. Test
- * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
- * click on `All the programs` and then the `Anaconda (64-bit)` folder, what you are looking for is the `IPython (Py 3.6)` entry. Click there (and not the `IPython (Py 3.6) Notebook` nor the `IPython (Py 3.6) QTConsole`).
+ * click on the Windows icon on the left bottom of your screen. For windows 8 early version users, use your search command to find the application using its name.
+ * click on `All the programs` and then the `Anaconda (64-bit)` folder, what you are looking for is the `IPython (Py 3.6)` entry. Click there.
  * this launches a window that understands only commands in the python language
- * in just after the `$` sign, type each of those lines one by one followed by a stroke on the `Enter` key
+ * type each of those lines one by one followed by a stroke on the `Enter` key
 
    ```
    import numpy as np
@@ -274,7 +269,6 @@ __________________________________________________
  * When the installation of expyriment is over, you can even type `exit` and press on `Enter` to close the window, how convenient!
  4. Testing pygame
 
-  * First test
     * click on the windows icon on the left bottom of your screen. For windows 8 early version users, use your search command fo find the application  using its name.
     * click on `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`
     * after the "IPython window" has opened, you can copy and paste the following seven lines just after the `In [1]:`, then press twice on `Enter`
@@ -292,79 +286,28 @@ __________________________________________________
     * You should see a little window appear, change color and then disappear (if it doesn't disappear, hit the `Enter` key).
     * press the keys `ctrl+D` and confirm your will to exit in order to quit the ipython console
     * if all these terms "console", "command", "prompt", "anaconda", or the difference between python and "ipython" seems rather confusing, don't worry, the first Info lectures will help you.
-  * Second test
-    * click on the `Windows` icon (or just press the `Windows` key on your keyboard), then on `All the programs` and then the `Anaconda3 64bits` folder, then on  `Anaconda Prompt`
-    * at the prompt, type the following text, with the correct user name then press on `Enter`
-
-      ```
-      python C:Users\user_name\AppData\Local\Continuum\Anaconda3\Lib\site-packages\pygame\examples\chimp.py
-      ```
-
-     You should be able to play a silly little game, including sound (make sure the sound is on, but not too loud).
-
-5. Testing expyriment
-
-  * Launch the ipython console as you did in the 4th step (`Window` icon, `All the programs` and then the `Anaconda3 64 bits` folder, then on `Ipython`).  
-  You should see the `In [1]: ` and the blinking cursor after which you can start typing.
-  * In the console, type or copy paste the following lines one by one
-
-  ```
-  import expyriment
-  ```
-  ```
-  exp = expyriment.design.Experiment(name="test")
-  ```
-  ```
-  expyriment.control.initialize(exp)
-  ```
-
-  * You should now see this message:
-
-  ```
-  Python is running in an interactive shell but Expyriment wants to initialize a fullscreen  
-  Do you want to switch to windows mode? (Y/n)
-  ```
-
-  * Confirm the switch to a windowed mode by hitting the `Enter` key (Y is in uppercase to show it's the default option, you can also type "yes" then hit `Enter`).
-  * Then you should see the expyriment window appear and do its stuff ("preparing expyriment...") until the "Preparing experiment..." message is displayed
-  * Select the python window and execute the following command:
-
-  ```
-  expyriment.control.start()
-  ```
-
-  * Then you should select the expyriment window and hit `Enter` to validate the subject number.  
-  The windows should now diplay "Ready". Hit `Enter` a second time to validate.
-  * Select the python window, you should see the `In [X]: ` and the blinking cursor after which you can start typing, then execute the following command:
-
-  ```
-  expyriment.control.end()
-  ```
-
-  If this doesn't close the expyriment window, hit the `Enter` key once more.  
-  Now you can exit the python command line using `Ctrl+d` and `Enter`.
 
 __________________________________________________
 
 
 
 
-## Installations for Mac OS
+# Installations for Mac OS
 
-### Configuration
+## Configuration
  * make sure you know the administrator password for your computer (password used to install new software) and that you are able to type it blind.
  * click on the `Finder` icon on your dock then click on the `Finder` text next to the `Apple` logo on the top left corner of your screen to get the menus, then on `Preferences`, then on the `Side Bar` tab, check the first unchecked box under `DEVICES`. Now you can close the `Finder Preferences` window.
  * click on the apple logo on the top left of your screen, then on `System Preferences`, the select the `Security & Privacy` icon and on the `General` tab, select the option `Anywhere` regarding `Allow apps downloaded from:`. You might have to click on the littke locker icon on the bottom left of the window and type your pasword if your preferences are protected.
  * open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then drag the `Terminal` icon and drop it on the second position of your "Dock", right after the `Finder` icon. No you have and easy access to the most powerful application of your mac.
 
-### XQuartz
+## XQuartz
 * Installation
  * double click on `XQuartz-?.?.?.dmg` (the `?` stands for any character) in your `Downloads` folder or wherever you downloaded it.
  * double click on the `XQuartz.pkg`
  * click on `Continue` and `Agree` until you can click on `Install`
  * log out and back in if requested to do so
 
-### Git
+## Git
 0. Set up an account on Github.com
  * Open an internet browser and go to [http://github.com]
  * fill the requested fields with appropriate username, email, and password
@@ -385,13 +328,13 @@ __________________________________________________
  * now you can just quit the "Github Desktop" application
 
 
-### Atom
+## Atom
  * Go to your `Downloads` folder
  * decompress the `.zip` archive if needed by double-cliking its icon
  * drag the `GitHub Desktop.app` and drop it in your `Application` Folder
 
 
-### Scratch
+## Scratch
 1. Install `MacScratch1.4.dmg` as usual:
  * select your `Downloads` folder from the `Dock`
  * clic on the .dmg file to mount the virtual disk that wraps the application
@@ -403,7 +346,7 @@ __________________________________________________
  * then clic on the `Scratch.app` icon
  * the Scratch window should appear on your screen and you should be able to drag and move the little animal around
 
-### R and RStudio
+## R and RStudio
 1. R installation
  * in the Finder open the folder in which you downloaded the `R-?.?.?.pkg` R package
  * double-click on the package icon
@@ -426,7 +369,7 @@ __________________________________________________
 then, hit the `Enter` key.
 
 
-### Python
+## Python
 1. Install the Anaconda python distribution
  * go to your `Downloads` folder and double click on the file `Anaconda3-?.?.?-MacOSX-x86_64.pkg` in order to start the installation.
  * click on `Continue` several times and `Agree` on licence terms until the installation is completed, if at some point you see the error "You cannot install Anaconda in this location", then just click on `Install for me only` and you should be able to continue.
@@ -613,7 +556,7 @@ __________________________________________________
 
 
 
-## Installations for Ubuntu
+# Installations for Ubuntu
 
 
 First of all, you must determine if your system is 32 or 64 bits. Open
@@ -628,7 +571,7 @@ Second, you must make sure to have `wget`:
 
 	sudo apt install wget
 
-### Scratch
+## Scratch
 
     sudo apt install scratch
 	scratch
@@ -636,7 +579,7 @@ Second, you must make sure to have `wget`:
 This should open scratch in a new window, where you should be able to grab and move the little mascot. Quit scratch and continue the installation.
 
 
-### Text Editor
+## Text Editor
 
 Note: If you are already using a decent text editor under linux
 (gedit, emacs, vim,...) you won't need Atom or Sublime Text.
@@ -650,7 +593,7 @@ Note: If you are already using a decent text editor under linux
 * if your linux is 32 bits, download the latest build package (currently 3114) from
 [this link](https://download.sublimetext.com/sublime-text_build-3114_i386.deb) or the `Ubuntu 32 bits` link on https://www.sublimetext.com/3
 
-### Python
+## Python
 
 if you system is 64 bits:
 
@@ -699,7 +642,7 @@ To exit the ipython shell, type `quit()` or the keyboard
 shortcut `ctrl + D`
 
 
-### Git
+## Git
 
 First, set up an account on Github.com
   1. Open an internet browser and go to http://github.com
@@ -726,7 +669,7 @@ You will be able to update it at any time by typing:
     git pull
 
 
-### R
+## R
 
 The instructions to install R are available here:
 https://cran.r-project.org/bin/linux/ubuntu/README.html#installation
@@ -744,7 +687,7 @@ In a nutshell:
 	sudo apt-get install r-base r-base-dev r-cran-lme4 r-cran-plyr r-cran-ggplot2 r-cran-multcomp r-cran-nlme r-cran-lattice r-cran-multicore
 
 
-### Rstudio
+## Rstudio
 
 If you have a 64 bits system (arch = `x86_64`)
 
@@ -765,6 +708,6 @@ Then, launch `rstudio` in a terminal, and in the rstudio console, type
 
 And press 'enter' to display graphs in the `plots` panel.
 
-### other useful software
+## other useful software
 
 	sudo apt install meld rsync pandoc

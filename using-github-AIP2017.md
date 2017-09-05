@@ -16,7 +16,9 @@ You should make a local copy of these materials on your computer:
 
   The materials should now be available in the folder `AIP2017`.
 
-- _Updating_: To download updates from the repository, you will just have to type
+- _Updating_ 
+
+  To download updates from the repository, you will just have to type
 
         cd AIP2017
 	    git pull
@@ -24,10 +26,14 @@ You should make a local copy of these materials on your computer:
 
 **Windows with GitHub Desktop installed**
 
-- First time Download. Start GitHub Desktop and click on "Clone a Repository".
-When asked to enter a "repository URL or a Github username and repo name", type `chrplr/AIP2017`. This will download the lecture files in `Documents/Github/AIP2017`. You can now close Github Desktop.
+- _First time Download_
+
+  Start GitHub Desktop and click on "Clone a Repository".
+  When asked to enter a "repository URL or a Github username and repo name",  type `chrplr/AIP2017`. This will download the lecture files in `Documents/Github/AIP2017`. You can now close Github Desktop.
 
 - _Updating_ 
+
+  Open GitHub Desktop, Make sure current repository is 'AIP2017' and click on 'fetch Origin' and then on 'Pull Origin' 
 
 **Windows without Github Desktop**
 

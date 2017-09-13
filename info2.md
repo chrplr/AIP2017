@@ -182,6 +182,9 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 
 1. write a function that computes the factorial of an integer number (`factorial(n) = n(n-1)(n-2)...x 2 x 1`)
 
+1. Write a program which draws Koch's snowflake (https://en.wikipedia.org/wiki/Koch_snowflake). You may use, for example, the `turtle` module.
+
+
 1. "Un magasin propose des CD à 15€ et des des DVD à 20€. Pour tout achat d'au moins 4 CD,  il est consenti une réduction de 20% sur les CD. Pour l'achat d'au moins 3DVD, il est consenti une réduction de 15% sur le DVD. Construire un programme permettant d'obtenir le prix à payer suivant le nombre n de CD et m de DVD achetés."
 
 1. Write a program to compute the greatest common divisor (GCD) of two numbers.
@@ -189,6 +192,7 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 1. Write a program that plays the "guess a number" game: the computer selects a random number between 1 and 100, asks you to make a guess and tells you if the guess is correct, too low or too high.
 
 1. Write a program that plays "guess a number" where _you_ think about a number between 1 and 100 that the computer must guess.
+
 
  
 
@@ -221,12 +225,9 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 
 1. Write a program that evaluates arithmetic expressions written in Reversed Polish Notation (https://en.wikipedia.org/wiki/Reverse_Polish_notation). For example the string '3 4 5 * +' would evaluate to 23.
 
-1. Write a program which draws Koch's snowflake (https://en.wikipedia.org/wiki/Koch_snowflake). You may use, for example, the `turtle` module.
 
 
 ## Level 3
-
-
 
 * Concepts 
 
@@ -234,12 +235,21 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 
 * Exercices
 
+
 1. Write a function that reads a text file and count how many words (tokens) it contains (we consider that a word is simply anything between two whitespaces). 
 
 1. Write a function that reads a text file and count how many different words (types) it contains.
 
 1. Write a function that computes the number of occurrences of each word type in a text. First, consider that tokens are anything separated by whitespaces. In a second step, improve you function to clean the punctuations, ignore case changes, etc...
 
+1. Write a function that reads a csv file containing two columns with numbers and report the averages of each colums. 
+
+
+## Level 4
+
+- Numerical computing with numpy and scipy: Read sections 1.3 and 1.4 of the scipy lectures: http://www.scipy-lectures.org/intro/index.html 
+
+- Data manipulation with pandas. Try some tutorials at https://pandas.pydata.org/pandas-docs/stable/tutorials.html
 
 
 ## Projects 

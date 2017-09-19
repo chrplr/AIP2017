@@ -236,6 +236,7 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 * Exercices
 
 
+
 1. Write a function that reads a text file and count how many words (tokens) it contains (we consider that a word is simply anything between two whitespaces). 
 
 1. Write a function that reads a text file and count how many different words (types) it contains.
@@ -244,6 +245,9 @@ We will use a slack workgroup (aip2017-info2.slack.com) to exchange during the l
 
 1. Write a function that reads a csv file containing two columns with numbers and report the averages of each colums. 
 
+1. Write a script that renames all the files in the current directory with numbers (file001, file002, ....) keepinh their extention (use module `os` and `os.path`)
+
+1. Write a script that renames all the files in the current directory using their date of creation as new name, keeping their extention (use module `os` and `os.path`)
 
 ## Level 4
 

@@ -1,0 +1,18 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 22:22:04
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+10067,design,log,
+#design: #exp: expy-simon
+#design: #dvn: side,color,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+10067,design,logged,
+10067,Experiment,started
+10129,Stimulus,presented,1
+10131,stderr,received,'Traceback (most recent call last):'
+10132,stderr,received,'  File "expy-simon.py", line 19, in <module>'
+10132,stderr,received,'    exp.keyboard.wait(expyriment.misc.constants.K_SPACE)'
+10132,stderr,received,"NameError: name 'expyriment' is not defined"

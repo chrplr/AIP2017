@@ -1,0 +1,20 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 20:35:02
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+11650,design,log,
+#design: #exp: expy-simon
+#design: #dvn: side,color,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+11650,design,logged,
+11650,Experiment,started
+11652,Stimulus,presented,2
+12152,Stimulus,presented,1
+17345,Keyboard,received,276,wait
+17345,stderr,received,'Traceback (most recent call last):'
+17345,stderr,received,'  File "expy-simon.py", line 25, in <module>'
+17345,stderr,received,'    error = (button == misc.constants.K_LEFT) == digit%2'
+17345,stderr,received,"NameError: name 'digit' is not defined"

@@ -1,0 +1,48 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 20:45:17
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+11159,design,log,
+#design: #exp: expy-simon
+#design: #dvn: side,color,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+11159,design,logged,
+11159,Experiment,started
+11161,Stimulus,presented,2
+11660,Stimulus,presented,1
+12735,Keyboard,received,102,wait
+12750,Stimulus,played,b'/tmp/expyriment_3zedrgi6/freq2000_dur200.0_f0z_byo_.wav'
+12774,Stimulus,presented,4
+13752,Stimulus,presented,6
+14252,Stimulus,presented,5
+14647,Keyboard,received,102,wait
+14671,Stimulus,played,b'/tmp/expyriment_3zedrgi6/freq2000_dur200.0_jq7mkptx.wav'
+14712,Stimulus,presented,8
+15672,Stimulus,presented,10
+16173,Stimulus,presented,9
+16671,Keyboard,received,102,wait
+16704,Stimulus,presented,11
+17673,Stimulus,presented,13
+18173,Stimulus,presented,12
+18491,Keyboard,received,106,wait
+18516,Stimulus,played,b'/tmp/expyriment_3zedrgi6/freq2000_dur200.0_vytlst3a.wav'
+18546,Stimulus,presented,15
+19519,Stimulus,presented,17
+20019,Stimulus,presented,16
+20361,Keyboard,received,102,wait
+20389,Stimulus,presented,18
+21362,Stimulus,presented,20
+21862,Stimulus,presented,19
+22851,Keyboard,received,106,wait
+22888,Stimulus,presented,21
+23853,Stimulus,presented,23
+24354,Stimulus,presented,22
+24356,Experiment,paused
+24359,Stimulus,presented,24
+25360,Keyboard,received,b'y',wait_char
+25360,Experiment,ended
+25361,Data,saved
+25365,Stimulus,presented,24

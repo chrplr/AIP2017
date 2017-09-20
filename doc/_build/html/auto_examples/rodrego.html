@@ -1,0 +1,155 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>&lt;no title&gt; &#8212; AIP2017 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <blockquote id="sphx-glr-auto-examples-rodrego-py">
+<div><p>Interpreter of the RodRego register machine.</p>
+<p>Interpreter of the RodRego register machine.</p>
+</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">program</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">deb 2 2 3</span>
+<span class="s2">inc 1 1</span>
+<span class="s2">end</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">prg</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">program</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()]</span>
+<span class="n">registers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+
+<span class="n">registers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">registers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">IP</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># interpretative pointer</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">IP</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">prg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;IP = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">IP</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">registers</span><span class="p">)</span>
+
+    <span class="n">instruc</span> <span class="o">=</span> <span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="n">reg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;inc&#39;</span><span class="p">:</span>
+        <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">elif</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;deb&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;unknown command: &#39;</span> <span class="o">+</span> <span class="n">instruc</span> <span class="o">+</span> <span class="s1">&#39; on line &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">IP</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../_downloads/rodrego.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">rodrego.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../_downloads/rodrego.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">rodrego.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">AIP2017</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/auto_examples/rodrego.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

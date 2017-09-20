@@ -1,0 +1,57 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 20:25:33
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+11120,design,log,
+#design: #exp: simon
+#design: #dvn: digit,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+11120,design,logged,
+11120,Experiment,started
+11128,Stimulus,presented,2
+11625,Stimulus,presented,1
+14126,Keyboard,received,276,wait
+14160,Stimulus,presented,3
+15131,Stimulus,presented,5
+15630,Stimulus,presented,4
+16074,Keyboard,received,275,wait
+16098,Stimulus,presented,6
+17076,Stimulus,presented,8
+17576,Stimulus,presented,7
+19273,Keyboard,received,275,wait
+19286,Stimulus,played,b'/tmp/expyriment__vumjag8/freq2000_dur200.0_1qcqd4_f.wav'
+19306,Stimulus,presented,10
+20287,Stimulus,presented,12
+20788,Stimulus,presented,11
+21518,Keyboard,received,275,wait
+21533,Stimulus,played,b'/tmp/expyriment__vumjag8/freq2000_dur200.0__8hhwc17.wav'
+21551,Stimulus,presented,14
+22538,Stimulus,presented,16
+23038,Stimulus,presented,15
+23739,Keyboard,received,276,wait
+23758,Stimulus,presented,17
+24740,Stimulus,presented,19
+25241,Stimulus,presented,18
+25905,Keyboard,received,275,wait
+25922,Stimulus,presented,20
+26906,Stimulus,presented,22
+27407,Stimulus,presented,21
+27780,Keyboard,received,276,wait
+27799,Stimulus,played,b'/tmp/expyriment__vumjag8/freq2000_dur200.0_j46zyi5e.wav'
+27818,Stimulus,presented,24
+28801,Stimulus,presented,26
+29301,Stimulus,presented,25
+29648,Keyboard,received,276,wait
+29661,Stimulus,played,b'/tmp/expyriment__vumjag8/freq2000_dur200.0_qkfonw19.wav'
+29679,Stimulus,presented,28
+30663,Stimulus,presented,30
+31164,Stimulus,presented,29
+36779,Experiment,paused
+36782,Stimulus,presented,31
+37827,Keyboard,received,b'y',wait_char
+37827,Experiment,ended
+37828,Data,saved
+37829,Stimulus,presented,31

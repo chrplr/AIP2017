@@ -1,0 +1,49 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 22:16:15
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+11622,design,log,
+#design: #exp: expy-simon
+#design: #dvn: side,color,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+11623,design,logged,
+11623,Experiment,started
+11625,Stimulus,presented,2
+12124,Stimulus,presented,1
+14278,Keyboard,received,102,wait
+14305,Stimulus,presented,3
+15280,Stimulus,presented,5
+15780,Stimulus,presented,4
+17375,Keyboard,received,106,wait
+17412,Stimulus,presented,6
+18377,Stimulus,presented,8
+18876,Stimulus,presented,7
+19556,Keyboard,received,106,wait
+19589,Stimulus,presented,9
+20557,Stimulus,presented,11
+21057,Stimulus,presented,10
+22148,Keyboard,received,102,wait
+22182,Stimulus,presented,12
+23151,Stimulus,presented,14
+23650,Stimulus,presented,13
+24273,Keyboard,received,106,wait
+24305,Stimulus,presented,15
+25275,Stimulus,presented,17
+25775,Stimulus,presented,16
+26563,Keyboard,received,106,wait
+26592,Stimulus,presented,18
+27567,Stimulus,presented,20
+28066,Stimulus,presented,19
+28938,Keyboard,received,102,wait
+28977,Stimulus,presented,21
+29939,Stimulus,presented,23
+30439,Stimulus,presented,22
+32172,Experiment,paused
+32176,Stimulus,presented,24
+33376,Keyboard,received,b'y',wait_char
+33376,Experiment,ended
+33376,Data,saved
+33378,Stimulus,presented,24

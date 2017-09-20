@@ -1,0 +1,11 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 22:22:44
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4197,stderr,received,'Traceback (most recent call last):'
+4197,stderr,received,'  File "expy-simon.py", line 17, in <module>'
+4197,stderr,received,'    exp.control.start(skip_ready_screen=True)'
+4197,stderr,received,"AttributeError: 'Experiment' object has no attribute 'control'"

@@ -1,0 +1,24 @@
+#Expyriment 0.9.0 (Python 3.6.1), .xpe-file, coding: UTF-8
+#date: Tue Sep 19 2017 20:33:46
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+12179,design,log,
+#design: #exp: expy-simon
+#design: #dvn: side,color,btn,rt,error
+#design: block_cnt,block_id,trial_cnt,trial_id
+12179,design,logged,
+12179,Experiment,started
+12182,Stimulus,presented,2
+12184,stderr,received,'Traceback (most recent call last):'
+12184,stderr,received,'  File "expy-simon.py", line 21, in <module>'
+12184,stderr,received,'    exp.clock.wait(500 - stimuli.FixCross().present() - target.preload())'
+12184,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_visual.py", line 916, in preload'
+12185,stderr,received,'    self._get_surface(),'
+12185,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_visual.py", line 404, in _get_surface'
+12185,stderr,received,'    tmp = self._create_surface()'
+12185,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_ellipse.py", line 152, in _create_surface'
+12186,stderr,received,'    surface.fill(self._colour, special_flags=pygame.BLEND_RGB_MAX)'
+12186,stderr,received,'TypeError: invalid color argument'

@@ -101,6 +101,26 @@ General-purpose for Python
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Test of matplotlib.animation">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_example-animation_thumb.png
+
+        :ref:`sphx_glr_auto_examples_example-animation.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/example-animation
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="* Tarif A: prise en charge de 4.80€ puis 1.15€ par km parcouru * Tarif B: prise en charge de 3....">
 
 .. only:: html
@@ -118,6 +138,26 @@ General-purpose for Python
    :hidden:
 
    /auto_examples/taxis
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="   Count the number of occurrences of words in a text file">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_word-count_thumb.png
+
+        :ref:`sphx_glr_auto_examples_word-count.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/word-count
 
 .. raw:: html
 
@@ -218,6 +258,46 @@ General-purpose for Python
    :hidden:
 
    /auto_examples/expy-simon
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Options:  -h #  Use a screen of height # for the simulation  -w #  Use a screen of width # for...">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_ca_thumb.png
+
+        :ref:`sphx_glr_auto_examples_ca.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/ca
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="code from http://code.activestate.com/recipes/343386-wolfram-style-cellular-automata/ ">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/sphx_glr_cellular-automata_thumb.png
+
+        :ref:`sphx_glr_auto_examples_cellular-automata.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/cellular-automata
 
 .. raw:: html
 

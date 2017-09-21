@@ -12502,16 +12502,6 @@ tt.forward(100)
 <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span><span class="p">:</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">element</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
-
-
-<span class="c1"># terrible way, but demonstrating enumerate</span>
-<span class="p">[(</span><span class="n">x</span> <span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">liste</span><span class="p">)]</span>
-
-<span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12547,18 +12537,27 @@ tt.forward(100)
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given two lists, return a new list which contains the sums of elements in these lists</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">liste1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">liste2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 
-<span class="n">somme</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">liste1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">liste1</span><span class="p">,</span> <span class="n">liste2</span><span class="p">)):</span>
-    <span class="n">somme</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
-    <span class="c1">#    somme.append(i + j)</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">liste1</span><span class="p">,</span> <span class="n">liste2</span><span class="p">):</span>
+    <span class="n">somme</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
     
 <span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
 </pre></div>
@@ -12586,10 +12585,23 @@ tt.forward(100)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">liste1</span><span class="p">,</span> <span class="n">liste2</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Note</span> <span class="n">that</span> <span class="err">`</span><span class="nb">zip</span><span class="err">`</span> <span class="s2">&quot;unites&quot;</span> <span class="n">the</span> <span class="n">two</span> <span class="n">lists</span> <span class="k">as</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">couples</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">liste1</span><span class="p">,</span> <span class="n">liste2</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12601,16 +12613,880 @@ tt.forward(100)
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(0, (3, 6)), (1, (4, 3)), (2, (5, 0))]</pre>
+<pre>[(3, 6), (4, 3), (5, 0)]</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un magasin propose des CD à 15€ et des des DVD à 20€. Pour tout achat d'au moins 4 CD,  il est consenti une réduction de 20% sur les CD. Pour l'achat d'au moins 3DVD, il est consenti une réduction de 15% sur le DVD. Construire un programme permettant d'obtenir le prix à payer suivant le nombre n de CD et m de DVD achetés."</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PRIX_CD</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># en €</span>
+<span class="n">PRIX_DVD</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># en €</span>
+
+
+<span class="n">SEUIL_CD</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">RABAIT_CD</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># en %</span>
+<span class="n">SEUIL_DVD</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">RABAIT_DVD</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># en %</span>
+
+<span class="n">PRIX_CD_SOLDE</span> <span class="o">=</span> <span class="n">PRIX_CD</span> <span class="o">*</span> <span class="p">((</span><span class="mi">100</span> <span class="o">-</span> <span class="n">RABAIT_CD</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">PRIX_DVD_SOLDE</span> <span class="o">=</span> <span class="n">PRIX_DVD</span> <span class="o">*</span> <span class="p">((</span><span class="mi">100</span> <span class="o">-</span> <span class="n">RABAIT_DVD</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">prix</span><span class="p">(</span><span class="n">n_cd</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_dvd</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Calcule le prix total en fonction du nombre de CD et de DVD &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n_cd</span> <span class="o">&lt;</span> <span class="n">SEUIL_CD</span><span class="p">:</span>
+        <span class="n">prix_cd</span> <span class="o">=</span> <span class="n">n_cd</span> <span class="o">*</span> <span class="n">PRIX_CD</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prix_cd</span> <span class="o">=</span> <span class="n">n_cd</span> <span class="o">*</span> <span class="n">PRIX_CD_SOLDE</span>
+    <span class="k">if</span> <span class="n">n_dvd</span> <span class="o">&lt;</span> <span class="n">SEUIL_DVD</span><span class="p">:</span>
+        <span class="n">prix_dvd</span> <span class="o">=</span> <span class="n">n_dvd</span> <span class="o">*</span> <span class="n">PRIX_DVD</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prix_dvd</span> <span class="o">=</span> <span class="n">n_dvd</span> <span class="o">*</span> <span class="n">PRIX_DVD_SOLDE</span>
+    <span class="k">return</span> <span class="n">prix_cd</span> <span class="o">+</span> <span class="n">prix_dvd</span>   <span class="c1"># prix total</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="n">n_cd</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prix</span><span class="p">(</span><span class="n">n_dvd</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cd=</span><span class="si">{}</span><span class="s2"> dvd=</span><span class="si">{}</span><span class="s2"> -&gt; prix=</span><span class="si">{}</span><span class="s2">€&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">prix</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>35
+70
+65
+68.0
+88.0
+99.0
+116.0
+60.0
+85.0
+cd=0 dvd=0 -&gt; prix=0€
+cd=0 dvd=1 -&gt; prix=20€
+cd=0 dvd=2 -&gt; prix=40€
+cd=0 dvd=3 -&gt; prix=51.0€
+cd=0 dvd=4 -&gt; prix=68.0€
+cd=0 dvd=5 -&gt; prix=85.0€
+cd=0 dvd=6 -&gt; prix=102.0€
+cd=0 dvd=7 -&gt; prix=119.0€
+cd=0 dvd=8 -&gt; prix=136.0€
+cd=0 dvd=9 -&gt; prix=153.0€
+cd=1 dvd=0 -&gt; prix=15€
+cd=1 dvd=1 -&gt; prix=35€
+cd=1 dvd=2 -&gt; prix=55€
+cd=1 dvd=3 -&gt; prix=66.0€
+cd=1 dvd=4 -&gt; prix=83.0€
+cd=1 dvd=5 -&gt; prix=100.0€
+cd=1 dvd=6 -&gt; prix=117.0€
+cd=1 dvd=7 -&gt; prix=134.0€
+cd=1 dvd=8 -&gt; prix=151.0€
+cd=1 dvd=9 -&gt; prix=168.0€
+cd=2 dvd=0 -&gt; prix=30€
+cd=2 dvd=1 -&gt; prix=50€
+cd=2 dvd=2 -&gt; prix=70€
+cd=2 dvd=3 -&gt; prix=81.0€
+cd=2 dvd=4 -&gt; prix=98.0€
+cd=2 dvd=5 -&gt; prix=115.0€
+cd=2 dvd=6 -&gt; prix=132.0€
+cd=2 dvd=7 -&gt; prix=149.0€
+cd=2 dvd=8 -&gt; prix=166.0€
+cd=2 dvd=9 -&gt; prix=183.0€
+cd=3 dvd=0 -&gt; prix=45€
+cd=3 dvd=1 -&gt; prix=65€
+cd=3 dvd=2 -&gt; prix=85€
+cd=3 dvd=3 -&gt; prix=96.0€
+cd=3 dvd=4 -&gt; prix=113.0€
+cd=3 dvd=5 -&gt; prix=130.0€
+cd=3 dvd=6 -&gt; prix=147.0€
+cd=3 dvd=7 -&gt; prix=164.0€
+cd=3 dvd=8 -&gt; prix=181.0€
+cd=3 dvd=9 -&gt; prix=198.0€
+cd=4 dvd=0 -&gt; prix=48.0€
+cd=4 dvd=1 -&gt; prix=68.0€
+cd=4 dvd=2 -&gt; prix=88.0€
+cd=4 dvd=3 -&gt; prix=99.0€
+cd=4 dvd=4 -&gt; prix=116.0€
+cd=4 dvd=5 -&gt; prix=133.0€
+cd=4 dvd=6 -&gt; prix=150.0€
+cd=4 dvd=7 -&gt; prix=167.0€
+cd=4 dvd=8 -&gt; prix=184.0€
+cd=4 dvd=9 -&gt; prix=201.0€
+cd=5 dvd=0 -&gt; prix=60.0€
+cd=5 dvd=1 -&gt; prix=80.0€
+cd=5 dvd=2 -&gt; prix=100.0€
+cd=5 dvd=3 -&gt; prix=111.0€
+cd=5 dvd=4 -&gt; prix=128.0€
+cd=5 dvd=5 -&gt; prix=145.0€
+cd=5 dvd=6 -&gt; prix=162.0€
+cd=5 dvd=7 -&gt; prix=179.0€
+cd=5 dvd=8 -&gt; prix=196.0€
+cd=5 dvd=9 -&gt; prix=213.0€
+cd=6 dvd=0 -&gt; prix=72.0€
+cd=6 dvd=1 -&gt; prix=92.0€
+cd=6 dvd=2 -&gt; prix=112.0€
+cd=6 dvd=3 -&gt; prix=123.0€
+cd=6 dvd=4 -&gt; prix=140.0€
+cd=6 dvd=5 -&gt; prix=157.0€
+cd=6 dvd=6 -&gt; prix=174.0€
+cd=6 dvd=7 -&gt; prix=191.0€
+cd=6 dvd=8 -&gt; prix=208.0€
+cd=6 dvd=9 -&gt; prix=225.0€
+cd=7 dvd=0 -&gt; prix=84.0€
+cd=7 dvd=1 -&gt; prix=104.0€
+cd=7 dvd=2 -&gt; prix=124.0€
+cd=7 dvd=3 -&gt; prix=135.0€
+cd=7 dvd=4 -&gt; prix=152.0€
+cd=7 dvd=5 -&gt; prix=169.0€
+cd=7 dvd=6 -&gt; prix=186.0€
+cd=7 dvd=7 -&gt; prix=203.0€
+cd=7 dvd=8 -&gt; prix=220.0€
+cd=7 dvd=9 -&gt; prix=237.0€
+cd=8 dvd=0 -&gt; prix=96.0€
+cd=8 dvd=1 -&gt; prix=116.0€
+cd=8 dvd=2 -&gt; prix=136.0€
+cd=8 dvd=3 -&gt; prix=147.0€
+cd=8 dvd=4 -&gt; prix=164.0€
+cd=8 dvd=5 -&gt; prix=181.0€
+cd=8 dvd=6 -&gt; prix=198.0€
+cd=8 dvd=7 -&gt; prix=215.0€
+cd=8 dvd=8 -&gt; prix=232.0€
+cd=8 dvd=9 -&gt; prix=249.0€
+cd=9 dvd=0 -&gt; prix=108.0€
+cd=9 dvd=1 -&gt; prix=128.0€
+cd=9 dvd=2 -&gt; prix=148.0€
+cd=9 dvd=3 -&gt; prix=159.0€
+cd=9 dvd=4 -&gt; prix=176.0€
+cd=9 dvd=5 -&gt; prix=193.0€
+cd=9 dvd=6 -&gt; prix=210.0€
+cd=9 dvd=7 -&gt; prix=227.0€
+cd=9 dvd=8 -&gt; prix=244.0€
+cd=9 dvd=9 -&gt; prix=261.0€
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a program to compute the greatest common divisor (GCD) of two numbers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; Several functions that compute the GCD&quot;&quot;&quot;</span>
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># to print the trace of execution</span>
+
+<span class="k">def</span> <span class="nf">gcd1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;GCD1: a=</span><span class="si">{a}</span><span class="s2"> b=</span><span class="si">{b}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">gcd1</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">gcd1</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">gcd2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># correct a potential problem in version 1</span>
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;GCD2: a=</span><span class="si">{a}</span><span class="s2"> b=</span><span class="si">{b}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">gcd1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">gcd3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># uses the modulo &#39;trick&#39;</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;GCD3: a=</span><span class="si">{a}</span><span class="s2"> b=</span><span class="si">{b}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">gcd3</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>  <span class="c1"># c is the remainder of the integer division of a by b</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span><span class="p">(</span><span class="n">gcd3</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">gcd4</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>  <span class="c1"># non recursive version</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+    <span class="k">while</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;GCD4: a=</span><span class="si">{a}</span><span class="s2"> b=</span><span class="si">{b}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span>
+    
+
+<span class="c1"># It is also possible to use a lambda:</span>
+<span class="n">gcd5</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">b</span> <span class="k">else</span> <span class="n">gcd5</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gcd1(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gcd1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gcd2(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gcd2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gcd3(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gcd3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gcd4(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gcd4</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gcd5(</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">) = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">gcd5</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>GCD1: a=12 b=16
+GCD1: a=16 b=12
+GCD1: a=4 b=12
+GCD1: a=12 b=4
+GCD1: a=8 b=4
+GCD1: a=4 b=4
+gcd1(12, 16) = 4
+GCD2: a=12 b=16
+GCD1: a=12 b=16
+GCD1: a=16 b=12
+GCD1: a=4 b=12
+GCD1: a=12 b=4
+GCD1: a=8 b=4
+GCD1: a=4 b=4
+gcd2(12, 16) = 4
+GCD3: a=12 b=16
+GCD3: a=16 b=12
+GCD3: a=12 b=4
+gcd3(12, 16) = 4
+GCD4: a=12 b=4
+GCD4: a=4 b=0
+gcd4(12, 16) = 4
+gcd5(12, 16) = 4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Level-2">Level 2<a class="anchor-link" href="#Level-2">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write code, that asks the user for a text, and then prints in reverse (e.g. inputting 'Hello' should produce 'olleH').</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>bonjour
+ruojnob
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Two taxi companies propose differents pricing schemes: "Tarif A: prise en charge de 4.80€ puis 1.15€ par km parcouru. Tarif B: prise en charge de 3.20€ puis 1.20€ par km parcouru." Ecrire un programme permettant de décider quelle compagnie choisir en fonction du nombre de kms à parcourir.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>def tarif_A(distance):
+    return 4.80 + (1.15 * distance)</p>
+<p>def tarif_B(distance):
+    return 3.20 + (1.20 * distance)</p>
+<h1 id="affichage">affichage<a class="anchor-link" href="#affichage">&#182;</a></h1><p>for d in range(100):
+    print("{} -&gt; tarifA = {}; tarifB = {}".format(d, tarif_A(d), tarif_B(d)))</p>
+<p>def choix(distance):
+    a = tarif_A(distance)
+    b = tarif_B(distance)
+    if a &lt; b:
+        return ("A", a)
+    else:
+        return ("B", b)</p>
+<p>print(10, choix(10))
+print(40, choix(40))
+print(100, choix(100))</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Given the function:</p>
+<p>def is_factor(a, b):
+       return b % a == 0</p>
+<p>Write a program that lists the prime numbers between 1 and 100.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_factor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">b</span> <span class="o">%</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">methode_pedestre</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">premiers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">prime</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">is_factor</span><span class="p">(</span><span class="n">i</span> <span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+                <span class="n">prime</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">prime</span><span class="p">:</span>
+            <span class="n">premiers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">premiers</span>
+
+
+<span class="n">methode_pedestre</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1,
+ 2,
+ 3,
+ 5,
+ 7,
+ 11,
+ 13,
+ 17,
+ 19,
+ 23,
+ 29,
+ 31,
+ 37,
+ 41,
+ 43,
+ 47,
+ 53,
+ 59,
+ 61,
+ 67,
+ 71,
+ 73,
+ 79,
+ 83,
+ 89,
+ 97]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a program that determines  prime numbers between 1 and 1000 using the Sieve of Eratoshenes <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="k">def</span> <span class="nf">crible_erathostene</span><span class="p">(</span><span class="nb">max</span><span class="p">):</span>
+    <span class="n">premiers</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="nb">max</span><span class="p">)</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">max</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">premiers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">p</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">//</span><span class="n">i</span><span class="p">)]:</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="nb">max</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">premiers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>       
+    <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">max</span><span class="p">)[</span><span class="n">premiers</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">crible_erathostene</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 0  1  2  3  4  5  7  9 11 13 17 19 23 25 29 31 37 41 43 47 49 53 59 61 67
+ 71 73 79 83 89 97]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a program that evaluates arithmetic expressions written in Reversed Polish Notation (<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>). For example the string '3 4 5 * +' would evaluate to 23.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">isfloat</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; check if string can be converted into a float; returns True or False &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">float</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+
+<span class="k">def</span> <span class="nf">rpn_eval</span><span class="p">(</span><span class="n">expr</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">stack</span>
+    <span class="n">lexpr</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">lexpr</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">isfloat</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;pi&#39;</span><span class="p">:</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span>  <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span>  <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val2</span> <span class="o">-</span> <span class="n">val1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span>  <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val1</span> <span class="o">*</span> <span class="n">val2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span>  <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val2</span> <span class="o">/</span> <span class="n">val1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;**&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val1</span> <span class="o">**</span> <span class="n">val2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;1/&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">val1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;sum&#39;</span><span class="p">:</span>
+            <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">stack</span><span class="p">)]</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;clr&#39;</span><span class="p">:</span>
+            <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;dup&#39;</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">val</span><span class="p">,</span> <span class="n">val</span><span class="p">])</span>
+        <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s1">&#39;swap&#39;</span><span class="p">:</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+            <span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown command : &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">)</span>
+
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">expr</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Enter an expression in RPN (or just &quot;Enter&quot; to quit) &gt; &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">expr</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">rpn_eval</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">stack</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Enter an expression in RPN (or just &#34;Enter&#34; to quit) &gt; 2 3 4 + *
+14.0
+
+Enter an expression in RPN (or just &#34;Enter&#34; to quit) &gt; 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Level-3">Level 3<a class="anchor-link" href="#Level-3">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a function that computes the number of occurrences of each word type in a text. First, consider that tokens are anything separated by whitespaces. In a second step, improve you function to clean the punctuations, ignore case changes, etc...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>  <span class="c1"># to sort the dictionary &#39;count&#39;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="c1"># filename = sys.argv[1]  # reads the filename as a command line argument</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;alice.txt&#39;</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">translator</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">translator</span><span class="p">)</span>  <span class="c1"># suppress punctuation signs</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+         <span class="n">counts</span><span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+         <span class="n">counts</span><span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="c1"># black magic follows:</span>
+<span class="n">sorted_counts</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">sorted_counts</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%20s</span><span class="s2"> : </span><span class="si">%5d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a function that reads a csv file <code>test.csv</code>containing two columns with numbers and report the averages of each columns.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">col1</span><span class="p">,</span> <span class="n">col2</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)):</span>
+    <span class="n">col1</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">col2</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">col1</span> <span class="o">/</span> <span class="n">n</span><span class="p">,</span> <span class="n">col2</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a simulator of a <em>Rodrego Register Machine</em> (<a href="https://sites.tufts.edu/rodrego/">https://sites.tufts.edu/rodrego/</a>). The input is a list of instructions (no need for line numbers).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">program</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">deb 2 2 3</span>
+<span class="s2">inc 1 1</span>
+<span class="s2">end</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
+ 
+<span class="n">prg</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">program</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()]</span>
+<span class="n">registers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+
+<span class="n">registers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">registers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">IP</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># interpretative pointer</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">IP</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">prg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">DEBUG</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IP = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">IP</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">registers</span><span class="p">)</span>
+
+    <span class="n">instruc</span> <span class="o">=</span> <span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="n">reg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;inc&#39;</span><span class="p">:</span>
+        <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="k">elif</span> <span class="n">instruc</span> <span class="o">==</span> <span class="s1">&#39;deb&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">registers</span><span class="p">[</span><span class="n">reg</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">IP</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">prg</span><span class="p">[</span><span class="n">IP</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;unknown command: &#39;</span> <span class="o">+</span> <span class="n">instruc</span> <span class="o">+</span> <span class="s1">&#39; on line &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">IP</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="k">break</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a program implementing a psychological experiment --- the Simon task (<a href="https://www.researchgate.net/figure/266736582_fig6_Figure-2-Trial-structure-and-stimuli-A-four-alternative-Simon-task-in-which-two-colors">https://www.researchgate.net/figure/266736582_fig6_Figure-2-Trial-structure-and-stimuli-A-four-alternative-Simon-task-in-which-two-colors</a>).  The exeriment is a succession of trials where either a green or a red disk is displayed. The user must press a left button for green disk, and a right button for red disk. Their reaction time is measures, in milliseconds. The trick is that the disks appear either at the left or at the right of a central fixation point. Althought location is irrelevant to perform the task, one typically observed an increase in reaction times when the side of display and the side of response are incongruent. To program this experiment, you should use the <code>expyriment</code> module.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#! /usr/bin/env python</span>
+<span class="c1"># must be run from the command line</span>
+
+<span class="n">instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Green and red disks will be displayed. Please press &#39;f&#39; for green ones, &#39;j&#39; for &#39;red&#39;  ones.  Please respond as quickly as possible.</span>
+
+<span class="s2">(You can interrupt the experiment at any time by pressing &#39;ESC&#39;)</span>
+
+<span class="s2">...Press the space bar to start...</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">expyriment</span> <span class="k">import</span> <span class="n">control</span><span class="p">,</span> <span class="n">stimuli</span><span class="p">,</span> <span class="n">design</span><span class="p">,</span> <span class="n">misc</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;red&#39;</span><span class="p">:(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;green&#39;</span><span class="p">:(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)}</span>
+<span class="n">positions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;left&#39;</span><span class="p">:(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="s1">&#39;right&#39;</span><span class="p">:(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">)}</span>
+<span class="n">trials</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">design</span><span class="o">.</span><span class="n">randomize</span><span class="o">.</span><span class="n">shuffle_list</span><span class="p">(</span><span class="n">trials</span><span class="p">)</span>
+
+<span class="n">exp</span> <span class="o">=</span> <span class="n">control</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">data_variable_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;side&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;btn&quot;</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">,</span> <span class="s2">&quot;error&quot;</span><span class="p">]</span>
+
+<span class="n">control</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span> <span class="n">skip_ready_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">stimuli</span><span class="o">.</span><span class="n">TextScreen</span><span class="p">(</span><span class="s2">&quot;Simon task&quot;</span><span class="p">,</span> <span class="n">instructions</span><span class="p">)</span><span class="o">.</span><span class="n">present</span><span class="p">()</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">keyboard</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">misc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">K_SPACE</span><span class="p">)</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">trial</span> <span class="ow">in</span> <span class="n">trials</span><span class="p">:</span>
+    <span class="n">target</span> <span class="o">=</span> <span class="n">stimuli</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">trial</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">position</span><span class="o">=</span><span class="n">positions</span><span class="p">[</span><span class="n">trial</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+    <span class="n">exp</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">500</span> <span class="o">-</span> <span class="n">stimuli</span><span class="o">.</span><span class="n">FixCross</span><span class="p">()</span><span class="o">.</span><span class="n">present</span><span class="p">()</span> <span class="o">-</span> <span class="n">target</span><span class="o">.</span><span class="n">preload</span><span class="p">())</span>
+    <span class="n">target</span><span class="o">.</span><span class="n">present</span><span class="p">()</span>
+    <span class="n">button</span><span class="p">,</span> <span class="n">rt</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="n">keyboard</span><span class="o">.</span><span class="n">wait</span><span class="p">([</span><span class="n">misc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">K_f</span><span class="p">,</span> <span class="n">misc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">K_j</span><span class="p">])</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="p">((</span><span class="n">button</span> <span class="o">==</span> <span class="n">misc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">K_f</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">trial</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;red&#39;</span><span class="p">))</span> <span class="o">|</span> \
+            <span class="p">((</span><span class="n">button</span> <span class="o">==</span> <span class="n">misc</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">K_j</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">trial</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;green&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">error</span><span class="p">:</span> <span class="n">stimuli</span><span class="o">.</span><span class="n">Tone</span><span class="p">(</span><span class="n">duration</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <span class="n">exp</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">add</span><span class="p">([</span><span class="n">trial</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">trial</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">button</span><span class="p">,</span> <span class="n">rt</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">error</span><span class="p">)])</span>
+    <span class="n">exp</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1000</span> <span class="o">-</span> <span class="n">stimuli</span><span class="o">.</span><span class="n">BlankScreen</span><span class="p">()</span><span class="o">.</span><span class="n">present</span><span class="p">()</span> <span class="o">-</span> <span class="n">target</span><span class="o">.</span><span class="n">unload</span><span class="p">())</span>
+
+<span class="n">control</span><span class="o">.</span><span class="n">end</span><span class="p">(</span><span class="n">goodbye_text</span><span class="o">=</span><span class="s2">&quot;Thank you very much...&quot;</span><span class="p">,</span> <span class="n">goodbye_delay</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 

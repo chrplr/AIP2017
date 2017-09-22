@@ -12,6 +12,6 @@ Materials for the Cogmaster lectures Introduction to Programming in Python (AIP2
    ), [pdf](https://rawgit.com/chrplr/AIP2017/master/how-computers-work.pdf))
 - Info2 lectures ([html](https://rawgit.com/chrplr/AIP2017/master/info2.html), [pdf](https://rawgit.com/chrplr/AIP2017/master/info2.pdf)) 
 
-- Responses to most exercices: https://rawgit.com/chrplr/AIP2017/master/info2-notebook.html
+- Responses to most exercices ([notebook](https://rawgit.com/chrplr/AIP2017/master/info2-notebook.ipynb), [html](https://rawgit.com/chrplr/AIP2017/master/info2-notebook.html))
 
-- Some solutions are available as scripts at https://rawgit.com/chrplr/AIP2017/master/doc/_build/html/auto_examples/
+- Some solutions are available as scripts at in [examples](https://github.com/chrplr/AIP2017/master/examples/)

@@ -15,3 +15,5 @@ Materials for the Cogmaster lectures Introduction to Programming in Python (AIP2
 - Responses to most exercices [html](https://rawgit.com/chrplr/AIP2017/master/info2-notebook.html)
 
 - Some solutions are available as scripts at in [examples](https://github.com/chrplr/AIP2017/tree/master/examples/)
+
+- Info1 lectures ([md](https://github.com/chrplr/AIP2017/tree/master/info1.md))

@@ -1,6 +1,15 @@
-### Sommaire
+---
+title: "Introduction to programming in  Python"
+author: "Pauline Roca"
+date: "21 September, 2017"
+output:
+  tufte::tufte_handout: default
+  tufte::tufte_html: default
+---
 
-#### Session 1 et 2:
+## Sommaire
+
+**Session 1 et 2:**
   * [Manipuler du texte en python](#manipuler-du-texte-en-python) :
   Type `string` ou `chaîne de caractères`, notion d'`itérable` et accès
 aux éléments, boucle `for`, formater des chaînes de caractères
@@ -13,7 +22,7 @@ aux éléments, boucle `for`, formater des chaînes de caractères
 
   * [Les dictionnaires](#les-dictionnaires) : Type `dictionnaire`, notion de paire `clé:valeur`
 
-#### Session 3 :
+**Session 3 :**
   * [Exercices sur l'occurrence des mots d'un texte](#exercices) : type `set`, opérateur logique `and` dans structure conditionnelle `if`,
 
 Révision : création et appel de fonctions, boucle for
@@ -21,7 +30,7 @@ Révision : création et appel de fonctions, boucle for
 Débug à l'exécution en lançant le script avec
  une console Anaconda.
 
-#### Session 4 :
+**Session 4 :**
   * [Manipulation de fichiers texte en python](#manipulation-de-fichiers-texte-en-python) : ouverture, lecture, écriture
   * [Introduction à la notion de test et de "test-driven development"](#introduction-à-la-notion-de-test-et-de-test-driven-development)
   * [Séance de développement orienté "test" (test-driven)](#séance-test-driven-development)
@@ -159,12 +168,12 @@ Une liste est un ensemble ordonné indicé d'éléments.
 L'`indice` ou `index` du premier élément est `0`.
 Il est associé à une valeur, la chaîne de caractère `red` ici.
 
-### Affichage des éléments d'une liste
+## Affichage des éléments d'une liste
 
     print(couleurs)
 
 
-### Parcours d'une liste
+## Parcours d'une liste
 
 **Boucle for**
 
@@ -186,7 +195,7 @@ La fonction `enumerate` est pratique, et permet de parcourir une liste en itéra
         print(index, color)
 
 -------
-### Exercice. Liste, texte et dictionnaire
+## Exercice. Liste, texte et dictionnaire
 On part de la variable de type `liste` nommée couleurs_en
 
     couleurs_en = ['red', 'blue', 'green', 'pink', 'yellow']
@@ -483,12 +492,12 @@ En quoi le code suivant vous permet de répondre à cette question ?
 (ce chapitre d'openclassroom peut vous aider:
 https://openclassrooms.com/courses/apprenez-a-programmer-en-python/portee-des-variables-et-references)
 
-#### Correction de l'exercice sur l'occurence des mots (Exos 3-5):
+**Correction de l'exercice sur l'occurence des mots (Exos 3-5):**
 La solution trouvée en classe dans
 [./examples/info1_occurrence_des_mots_en_classe.py](https://github.com/chrplr/AIP2017/tree/master/examples/info1_occurrence_des_mots_en_classe.py)
 et une autre solution dans [./examples/info1_occurrence_des_mots_autre_correction.py](https://github.com/chrplr/AIP2017/tree/master/examples/info1_occurrence_des_mots_autre_correction.py)
 
-#### Correction des autres exercices:
+**Correction des autres exercices:**
 [info1-notebook.ipynb](https://github.com/chrplr/AIP2017/tree/master/info1-notebook.ipynb)
 
 
@@ -521,7 +530,7 @@ sortie.
 
 # Introduction à la notion de test et de "test-driven development"
 
-### Remarques sur la manière d'écrire du code (de développer) :
+## Remarques sur la manière d'écrire du code (de développer) :
 Pour coder la fonction qui compte l'occurrence des mots d'un texte en entrée
 (exercices 3-6),
  il a fallu dans le fichier python [info1_occurrence_des_mots_en_classe.py](https://github.com/chrplr/AIP2017/tree/master/examples/info1_occurrence_des_mots_en_classe.py):
@@ -565,7 +574,7 @@ Pour cela, nous avons :
     * vérifier visuellement en contrôlant l'affichage (associé aux `print`)
     que la fonction qu'on testait faisait bien `ce qu'on attendait d'elle`
 
-### Avantages de faire des tests manuels
+## Avantages de faire des tests manuels
   * Tester en mode "Debug" avec la console Anaconda, nous a permis de
   vérifier sur un(des) cas concret(s) le comportement de notre fonction à l'exécution
   de celle-ci et de corriger au fur et à mesure les éventuels erreurs
@@ -574,7 +583,7 @@ Pour cela, nous avons :
 exemples de textes d'entrée que nous avons testés (" Les pigeons se moquent de mon chat ",
 "la la la la", "bonjour ça va va", etc).
 
-### Inconvénients/Problèmes éventuels reliés à cette manière de coder:
+## Inconvénients/Problèmes éventuels reliés à cette manière de coder:
 
   * un peu fastidieux de vérifier visuellement à chaque exécution que
   la fonction testée fait bien ce que l'on veut.
